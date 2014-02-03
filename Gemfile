@@ -38,6 +38,10 @@ gem 'spring',        group: :development
 # use factory girl for refactoring  
 gem 'factory_girl_rails'
 
+gem 'omniauth-twitter'
+
+gem 'devise'
+
 group :test, :development do 
 	gem 'rspec-rails'
 	gem 'capybara'

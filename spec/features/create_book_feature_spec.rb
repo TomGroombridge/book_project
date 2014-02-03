@@ -2,17 +2,6 @@ require 'spec_helper'
 
 describe ' creating a book' do 
 
-	context 'given a title' do
-
-		it "shoudl display the title of the book" do 
-			visit 'books/new'
-			fill_in 'Title', with: 'Mr Tickle'
-			click_button 'Submit'
-
-			expect(current_path).to eq '/books'
-			expect(page).to have_content 'Mr Tickle'
-		end
-	end
 
 	context 'given a title, author, image, url and category' do
 
