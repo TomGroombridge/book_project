@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.beta1'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+#Use postgresql at the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
@@ -33,6 +34,15 @@ gem 'sdoc',          group: :doc, require: false
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
 gem 'spring',        group: :development
+
+# use factory girl for refactoring  
+gem 'factory_girl_rails'
+
+group :test, :development do 
+	gem 'rspec-rails'
+	gem 'capybara'
+	gem 'database_cleaner'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
