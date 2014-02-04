@@ -1,9 +1,10 @@
 class OmniauthCallbacksController < ApplicationController
 
 	def twitter
-		user  = User.twitter_auth request.env["omniauth.auth"]
-		sign_in_and_redirect user
-		flash[:notice] = "Signed in successfully."
+		user = User.twitter_auth request.env["omniauth.auth"]
+		sign_in user
+    flash[:notice] = "Signed in successfully."
+    redirect_to '/'
 	end
 
 	# def failure
