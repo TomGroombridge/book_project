@@ -47,12 +47,15 @@ gem 'factory_girl_rails'
 
 gem 'omniauth-twitter'
 
+gem 'angularjs-rails'
+
 gem 'devise'
 
 group :test, :development do 
 	gem 'rspec-rails'
 	gem 'capybara'
 	gem 'database_cleaner'
+	gem 'factory_girl_rails'
 end
 
 # Use ActiveModel has_secure_password

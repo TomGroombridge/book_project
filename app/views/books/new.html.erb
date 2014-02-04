@@ -1,4 +1,9 @@
-
+<div>
+      <label>Title:</label>
+      <input type="text" ng-model="bookTitle" placeholder="Enter Title name here">
+      <hr>
+      <h1>{{bookTitle}}</h1>
+</div>	
 
 <%= form_for @book do |f| %>
 	<p>
