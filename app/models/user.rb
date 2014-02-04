@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   	User.find_or_create_by(credentials) do |user|
   	user.name = auth[:info][:name]
   	user.password = pwd
-  	used.password_confirmation = pwd
-  	
+  	user.password_confirmation = pwd
+  	user.avatar_url = auth[:info][:image]
   end
  end
 
