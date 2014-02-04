@@ -4,7 +4,7 @@ require 'hmac-sha2'
 class AmazonBookFetcher
 
   ACCESS_IDENTIFIER = 'AKIAJDSSWRQYZB7YML4Q'
-  SECRET_IDENTIFIER = ENV['S3_ACCESS_KEY']
+  SECRET_IDENTIFIER = Rails.application.secrets.s3_secret
 
   AMAZON_ENDPOINT = 'http://webservices.amazon.co.uk/onca/xml'
 
@@ -43,7 +43,6 @@ class AmazonBookFetcher
     # raise params.inspect
     canonical_querystring = params.sort.collect { |key, value| [CGI.escape(key.to_s), CGI.escape(value.to_s)].join('=') }.join('&')
     string_to_sign = ["GET", "webservices.amazon.co.uk", "/onca/xml", canonical_querystring].join("\n")
-
     hmac = HMAC::SHA256.new(SECRET_IDENTIFIER)
     hmac.update(string_to_sign)
     signature = Base64.encode64(hmac.digest).chomp # chomp is important!
