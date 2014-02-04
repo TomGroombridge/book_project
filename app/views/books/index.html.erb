@@ -2,8 +2,8 @@
 
 
 <div class="row">
-  <% @books.in_groups_of(3, false) do |x| %>
-  <% x.each do |book| %>
+  
+  <% @books.each do |book| %>
   <div class="col-md-4">
     <div class="thumbnail">
       <%= image_tag book.image_url %>
@@ -15,9 +15,8 @@
       </div>
     </div>
   </div>
-</div>
+
   
-<% end %>
 <% end %>
 
 
