@@ -1,22 +1,21 @@
-
 <% @books.each do |book| %>
-
-<p>
-	<strong>Title:</strong>
-	<%= book.title %>
-	<br>
-	<strong>Author:</strong>
-	<%= book.author %>
-	<br>
-	<strong>Image:</strong>
-	<%= book.image_url %>
-	<br>
-	<strong>Url:</strong>
-	<%= book.detail_page_url %>
-	<br>
-	<strong>Salesrank:</strong>
-	<%= book.sales_rank %>
-	<br>
-</p>
-
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag book.image_url %>
+      <div class="caption">
+        <h3><%= book.title %></h3>
+        <p><%= book.author %></p>
+        <p><a href="<%= book.detail_page_url %>" class="btn btn-primary centerize" role="button">Buy This Book</a> 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <% end %>
+
+
+
+
+
+
