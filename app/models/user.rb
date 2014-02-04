@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   	user.name = auth[:info][:name]
   	user.password = pwd
   	user.password_confirmation = pwd
-  	
+  	user.avatar_url = auth[:info][:image]
   end
  end
 
