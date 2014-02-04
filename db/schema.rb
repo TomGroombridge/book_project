@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204104038) do
+ActiveRecord::Schema.define(version: 20140204135117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,11 @@ ActiveRecord::Schema.define(version: 20140204104038) do
     t.datetime "updated_at"
     t.string   "title"
     t.string   "author"
-    t.string   "image"
-    t.string   "url"
     t.string   "category"
+    t.string   "image_url"
+    t.integer  "number_of_pages"
+    t.string   "detail_page_url"
+    t.integer  "sales_rank"
   end
 
   create_table "fetch_data", force: true do |t|
