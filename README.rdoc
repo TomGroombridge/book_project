@@ -1,2 +1,3 @@
 Our Final project at makers academy
-
+ 
+ using the twitter API and Amazon API
