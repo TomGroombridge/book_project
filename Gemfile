@@ -4,6 +4,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.beta1'
 
+# gem for http requests
+gem 'httparty'
+
+# gem for parsing the xml returned by amazon 
+gem 'nori'
+
+gem 'ruby-hmac'
 
 #Use postgresql at the database for Active Record
 gem 'pg'
