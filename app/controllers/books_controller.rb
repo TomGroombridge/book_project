@@ -6,10 +6,10 @@ class BooksController < ApplicationController
 
 	def create
 		params[:book]
-		@book = Book.new(params[:book].permit(:title))
+		@books = Book.find_top_matches(params[:book][:title])
 		# @book.user = current_user
-		@book.save
-		redirect_to '/'
+		# @book.save
+		redirect_to books_path
 	end
 
 	def git 
