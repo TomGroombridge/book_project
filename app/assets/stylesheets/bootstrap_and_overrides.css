@@ -5,3 +5,240 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+  body{
+  background-image:url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52dbe5607f0db_1.JPG');
+  background-size: 100%;
+  background-repeat: none;
+/*  background-color: black;*/
+  padding-top: 20px;
+}
+
+#intro {
+  background-color: #fff;
+}
+
+#input h1 {
+  color: white;
+}
+
+#top {
+  margin-top: 5%;
+}
+
+#input {
+  margin-top: 10%;
+}
+
+#threebooks {
+  margin-top: 25%;
+  margin-right: 10%;
+}
+
+.col-md-4 h1 {
+  font-size: 70px;
+  color: #6e4237;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-weight: bold;
+}
+
+.col-md-4 h2 {
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  font-weight: bold;
+  color: #6e4237;
+  text-align: center;
+}
+
+.col-md-3 p {
+  font-size: 20px;
+  color: #6e4237;
+  text-align: center;
+  font-family: 'Old Standard TT', serif;
+}
+
+.panel-image img.panel-image-preview {
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.panel-heading ~ .panel-image img.panel-image-preview {
+    border-radius: 0px;
+}
+
+.panel-image ~ .panel-body, .panel-image.hide-panel-body ~ .panel-body {
+    overflow: hidden;
+}
+.panel-image ~ .panel-footer a {
+    padding: 0px 10px;
+    font-size: 1.3em;
+    color: rgb(100, 100, 100);
+}
+
+.panel-image.hide-panel-body ~ .panel-body {
+    height: 0px;
+    padding: 0px;
+}
+
+/* Mobiles and small tablets*/
+
+/* need to give body or html a size to float buttons relative? */
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+  html {
+  size: 100%;
+  }
+
+  .jumbotron {
+  display: none;
+  }
+
+  body{
+  background-image:url('images/shelf.jpg');
+  background-size: 100%;
+  padding-top: 0%
+  }
+
+  .navbar-inverse {
+  background: none;
+  border: none;
+  }
+    
+  #top {
+  margin-top: 0%;
+  }
+
+  .navbar-brand {
+  display: none;
+  }
+    
+  .col-xs-12 h1 {
+  font-size: 25px;
+  color:#2c3e50;
+  text-align: left;
+  }
+  
+  #buttons {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:90%;
+  }
+}
+
+.btn-huge {
+  font-family: 'Lobster', cursive;
+    padding: 18px 28px;
+    font-size: 200%; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    width: 90%;    
+}
+
+.btn-facebook {
+  color: #ffffff;
+  background-color: #133783;
+  border-color: #133783;
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #ffffff;
+  background-color: #0e285f;
+  border-color: #0b214e;
+}
+
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #133783;
+  border-color: #133783;
+}
+
+.btn-twitter {
+  color: #ffffff;
+  background-color: #2daddc;
+  border-color: #0271bf;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #ffffff;
+  background-color: #2095c0;
+  border-color: #014d82;
+}
+
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #2daddc;
+  border-color: #0271bf;
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+
+
+
+
+
+
+
+
