@@ -7,6 +7,12 @@
 	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	  <%= csrf_meta_tags %>
+
+	  <!-- these 3 are for the autocomplete -->
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
 	</head>
 		<body>
@@ -17,9 +23,11 @@
 			</ul>
 
 				<%= yield %>
-
+				
+					
 					<p class="notice"><%= notice %></p>
 					<p class="alert"><%= alert %></p>
 
 		</body>
 </html>
+

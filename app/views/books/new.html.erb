@@ -2,10 +2,23 @@
 	<%= form_for @book do |f| %>
 		<p>
 		<%= f.label :title %> <br>
-		<%= f.text_field :title, 'ng-model' => 'title' %>
+		<%= f.text_field :title, 'ng-model' => 'title', 'id' => 'autocomplete' %>
 		</p>
 		<%= f.submit "Submit" %> 
 
 	<% end %>
 		<h1>{{ title }}</h1>
 </div>
+
+
+<script>
+var tags = [ "wind in the willows", "bounce", "wind in the willows 2", "javascript", "asp", "ruby" ];
+$( "#autocomplete" ).autocomplete({
+  source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});
+</script>

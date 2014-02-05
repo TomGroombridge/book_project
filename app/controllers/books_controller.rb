@@ -9,10 +9,10 @@ class BooksController < ApplicationController
 		@book = Book.new(params[:book].permit(:title))
 		# @book.user = current_user
 		@book.save
-		redirect_to books_path
+		redirect_to '/'
 	end
 
-	def index
+	def git 
 		@books = Book.all
 	end
 

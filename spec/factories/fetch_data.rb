@@ -4,3 +4,4 @@ FactoryGirl.define do
   factory :fetch_datum, :class => 'FetchData' do
   end
 end
+   
