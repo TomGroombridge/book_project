@@ -1,8 +1,11 @@
-<%= form_for @book do |f| %>
-	<p>
-	<%= f.label :title %> <br>
-	<%= f.text_field :title %>
-	</p>
-	<%= f.submit "Submit" %> 
+<div>
+	<%= form_for @book do |f| %>
+		<p>
+		<%= f.label :title %> <br>
+		<%= f.text_field :title, 'ng-model' => 'title' %>
+		</p>
+		<%= f.submit "Submit" %> 
 
-<% end %>
+	<% end %>
+		<h1>{{ title }}</h1>
+</div>
