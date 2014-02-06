@@ -4,10 +4,10 @@
     <title>Books</title>
     <!-- Obtain Bootstrap style sheet from CDN (online service) so it doesn't have to be on my machine -->
     <!-- Check http://www.bootstrapcdn.com/ for latest version. -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT' rel='stylesheet' type='text/css'>
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="main.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="initial-scale=1 maximum-scale=1">
  
   </head>
@@ -106,9 +106,9 @@
             <button class="btn btn-huge btn-twitter"><i class="fa fa-twitter"></i>&nbsp; &nbsp;Share</button>
             <li>
             <%= form_for @selection do |f| %>
-              <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book1' %>
-              <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book2' %>
-              <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book3' %>
+              <%= f.hidden_field 'book_ids', multiple: true, value: '6' %>
+              <%= f.hidden_field 'book_ids', multiple: true, value: nil %>
+              <%= f.hidden_field 'book_ids', multiple: true, value: nil %>
 
               <%= f.button do %>
                 <i class="fa fa-twitter fa-5x"></i>
