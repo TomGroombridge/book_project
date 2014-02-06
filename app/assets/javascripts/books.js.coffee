@@ -13,7 +13,7 @@ $ ->
       $('.panel-body h2')[0].innerText = books[0].title
       $('.panel-body h4')[0].innerText = books[0].author
 
-  $("#choose_another").on "click", ->
+  $(".btn-success, .next_book").on "click", ->
     alert "hello"
 
   find_selected_number()
