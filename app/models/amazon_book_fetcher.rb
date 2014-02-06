@@ -58,14 +58,13 @@ class AmazonBookFetcher
 
   def parse_response(response)
     parsed = Nori.new.parse(response.body)
-    books = parsed["ItemSearchResponse"]["Items"]["Item"].first(3)
+    books = parsed["ItemSearchResponse"]["Items"]["Item"]
     books.map do |book|
 
       book_details = {}
-      # raise book.inspect
+      next unless book["LargeImage"]
 
-
-      %w(Title Author NumberOfPages).each do |key|
+      %w(Title NumberOfPages).each do |key|
         book_details[key.underscore] = book["ItemAttributes"][key]
       end
 
@@ -75,6 +74,7 @@ class AmazonBookFetcher
 
       book_details ['asin'] = book["ASIN"]
       book_details['image_url'] = book["LargeImage"]["URL"]
+      book_details['author'] = [*book["ItemAttributes"]["Author"]].join(" and ")
       book_details['content'] = book["EditorialReviews"]["EditorialReview"]["Content"] rescue "No description"
       book_details
 
