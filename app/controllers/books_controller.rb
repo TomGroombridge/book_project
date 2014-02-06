@@ -12,7 +12,7 @@ class BooksController < ApplicationController
 		redirect_to books_path
 	end
 
-	def git 
+	def index 
 		@books = Book.all
 	end
 
