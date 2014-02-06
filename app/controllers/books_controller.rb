@@ -5,15 +5,15 @@ class BooksController < ApplicationController
 	end
 
 	def create
-		params[:book]
 		@books = Book.find_top_matches(params[:book][:title])
 		# @book.user = current_user
 		# @book.save
-		redirect_to books_path
+		render json: @books.to_json
 	end
 
-	def index 
-		@books = Book.all
-	end
+
+	# def index 
+	# 	@books = Book.all
+	# end
 
 end

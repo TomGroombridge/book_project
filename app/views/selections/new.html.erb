@@ -1,18 +1,4 @@
 
-
-
-<script>
-var tags = [ "wind in the willows", "bounce", "wind in the willows 2", "javascript", "asp", "ruby" ];
-$( "#autocomplete" ).autocomplete({
-  source: function( request, response ) {
-          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-          response( $.grep( tags, function( item ){
-              return matcher.test( item );
-          }) );
-      }
-});
-</script>
-
 <html>
   <head>
     <title>Books</title>
@@ -55,10 +41,12 @@ $( "#autocomplete" ).autocomplete({
         <div class="col-xs-12 col-md-4 col-md-offset-2" id="top">
           <h1>#dogearedpages</h1>
         </div>
+
         <div class="col-xs-12 col-md-3 col-md-offset-2" id="top">
           <p>A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
         </div>
        </div>
+
        <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
           <%= form_for @book do |f| %>
@@ -70,6 +58,7 @@ $( "#autocomplete" ).autocomplete({
        <div class="row" id="input">
         <h1>{{ title }}</h1>
        </div>
+
         <div class="row">
           <div class="col-md-4">
             <div class="panel panel-default" id="threebooks">
@@ -77,35 +66,41 @@ $( "#autocomplete" ).autocomplete({
                 <img src="images/mrtickle.jpg" class="panel-image-preview" />
               </div>
               <div class="panel-body">
-                <h4>Mr Tickle</h4>
-                <p>Rodger Hargreeve's</p>
+                <h2>Mr Tickle</h2>
+                <h4>Rodger Hargreeves</h4>
+                <button class="btn-success next_book" id="choose_another">Next</button>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="panel panel-default" id="threebooks">
               <div class="panel-image">
                 <img src="images/mrtickle.jpg" class="panel-image-preview" />
               </div>
               <div class="panel-body">
-                <h4>Mr Tickle</h4>
-                <p>Rodger Hargreeve's</p>
+                <h2>Mr Tickle</h2>
+                <h4>Rodger Hargreeves</h4>
+                <button class="btn-success next_book" id="choose_another">Next</button>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="panel panel-default" id="threebooks">
               <div class="panel-image">
                 <img src="images/mrtickle.jpg" class="panel-image-preview" />
               </div>
               <div class="panel-body">
-                <h4>Mr Tickle</h4>
-                <p>Rodger Hargreeve's</p>
+                <h2>Mr Tickle</h2>
+                <h4>Rodger Hargreeves</h4>
+                <button class="btn-success next_book" id="choose_another">Next</button>
               </div>
             </div>
           </div>
         </div>
-       <div class="row" id="buttons">
+
+      <div class="row" id="buttons">
         <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
           <form role="form">
             <fieldset>
@@ -116,6 +111,7 @@ $( "#autocomplete" ).autocomplete({
           </form>
         </div>
       </div>
+      
     </div> <!-- /container -->
   </div>
  
