@@ -13,9 +13,13 @@
     books = AmazonBookFetcher.new.search(title)
 
     books.map do |book_details|
-      Book.create(book_details)
+      preexisting_book = find_by(asin: book_details['asin'])
+
+      preexisting_book ? preexisting_book : Book.create(book_details)
     end
   end
+
+
  
   # def get_stuff
   #   book_details = AmazonBookFetcher.new.search(title)
