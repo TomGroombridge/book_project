@@ -21,8 +21,6 @@ $ ->
 
       $emptyBook.attr('data-filled', true)
       $emptyBook.data('all-books', books)
-      
-
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
