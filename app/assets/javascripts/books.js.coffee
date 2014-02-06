@@ -9,6 +9,9 @@ $ ->
     book.find('h2').text(books[index].title)
     book.find('h4').text(books[index].author)
     book.data('book-index', index)
+    bookId = book.attr("data-book-id")
+    debugger
+    $('#book'+bookId).val books[index].id
 
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
@@ -18,6 +21,8 @@ $ ->
       $emptyBook = $('.book[data-filled="false"]:first')
 
       bookView(books, $emptyBook, 0)
+      # bookId = $emptyBook.attr("data-book-id")
+      # $('#book'+bookId).val books[0].id
 
       $emptyBook.attr('data-filled', true)
       $emptyBook.data('all-books', books)
