@@ -10,8 +10,8 @@ class AmazonBookFetcher
 
   def search(title)
     params = sign_request search_params(title)
-    # raise params.inspect
     response = fetch_response(params)
+
 
     parse_response(response)    
   end
