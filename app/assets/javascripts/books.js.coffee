@@ -9,9 +9,9 @@ $ ->
     $.post '/books', $(this).serialize(), (books) ->
       console.log books
       
-      $(".panel-image img")[2].src = books[2].image_url
-      $('.panel-body h2')[2].innerText = books[2].title
-      $('.panel-body h4')[2].innerText = books[2].author
+      $(".panel-image img")[0].src = books[0].image_url
+      $('.panel-body h2')[0].innerText = books[0].title
+      $('.panel-body h4')[0].innerText = books[0].author
 
   $("#choose_another").on "click", ->
     alert "hello"
