@@ -2,6 +2,13 @@
   has_and_belongs_to_many :selections
   # before_create :get_stuff
 
+
+
+  # def top10_books
+  #   @book.selection.length 
+  #   @book.selection.sort_by {|book| book.length }
+  # end 
+
   def self.find_top_matches(title)
     books = AmazonBookFetcher.new.search(title)
 
