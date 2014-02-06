@@ -3,17 +3,35 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
+
+  bookView = (books, book, index) ->
+    book.find('img').attr('src', books[index].image_url)
+    book.find('h2').text(books[index].title)
+    book.find('h4').text(books[index].author)
+    book.data('book-index', index)
+
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
 
     $.post '/books', $(this).serialize(), (books) ->
       console.log books
+      $emptyBook = $('.book[data-filled="false"]:first')
+
+      bookView(books, $emptyBook, 0)
+
+      $emptyBook.attr('data-filled', true)
+      $emptyBook.data('all-books', books)
       
-      $(".panel-image img")[2].src = books[2].image_url
-      $('.panel-body h2')[2].innerText = books[2].title
-      $('.panel-body h4')[2].innerText = books[2].author
+
 
   $(".btn-success, .next_book").on "click", ->
-    alert "hello"
+    $currentBook = $(this).closest('.book')
+    books = $currentBook.data('all-books')
+    newIndex = $currentBook.data('book-index') + 1
+
+    if !books[newIndex]
+      newIndex = 0
+
+    bookView(books, $currentBook, newIndex)
 
   find_selected_number()
