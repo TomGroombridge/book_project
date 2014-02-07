@@ -290,6 +290,19 @@ line-height: 1.428571429;
 color: #999;
 }
 
+.col-lg-6 h4 {
+  font-family: 'Special Elite', cursive;
+}
 
+.col-lg-6 p {
+  font-family: 'Lobster', cursive;
+}
 
+.col-lg-6 h3 {
+  font-family: 'Lobster', cursive;
+}
 
+.top-books {
+  height: 500px;
+  overflow: scroll;
+}

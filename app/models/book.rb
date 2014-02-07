@@ -3,12 +3,6 @@
   # before_create :get_stuff
 
 
-
-  # def top10_books
-  #   @book.selection.length 
-  #   @book.selection.sort_by {|book| book.length }
-  # end 
-
   def self.find_top_matches(title)
     books = AmazonBookFetcher.new.search(title)
 
@@ -19,6 +13,16 @@
       preexisting_book ? preexisting_book : Book.create(book_details)
     end
   end
+
+
+  def self.top_10_books
+    top_ten = all.sort_by { |book| -book.selections.length }.first(10)
+  end
+
+  def show_selection_count
+
+  end
+
 
 
  
