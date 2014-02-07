@@ -9,6 +9,7 @@ gem 'httparty'
 
 # gem for parsing the xml returned by amazon 
 gem 'nori'
+gem 'fastercsv'
 
 gem 'ruby-hmac'
 
@@ -52,6 +53,8 @@ gem 'angularjs-rails'
 gem 'devise'
 
 gem 'twitter-bootstrap-rails', github:'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
+
+gem 'jquery-ui-rails'
 
 # gem 'less'
 
