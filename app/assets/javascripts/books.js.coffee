@@ -10,7 +10,6 @@ $ ->
     book.find('h4').text(books[index].author)
     book.data('book-index', index)
     bookId = book.attr("data-book-id")
-    debugger
     $('#book'+bookId).val books[index].id
 
   $('#new_book').on 'submit', (event) ->
@@ -37,4 +36,4 @@ $ ->
 
     bookView(books, $currentBook, newIndex)
 
-  find_selected_number()
+    

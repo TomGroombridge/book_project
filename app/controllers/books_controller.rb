@@ -11,6 +11,9 @@ class BooksController < ApplicationController
 		render json: @books.to_json
 	end
 
+	def update
+		
+	end
 
 	# def index 
 	# 	@books = Book.all
