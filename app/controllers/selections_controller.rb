@@ -6,8 +6,6 @@ class SelectionsController < ApplicationController
   end
 
   def create
-    # params[:selection][:book_ids] = ['3', '5', '7']
-
     @selection = Selection.new params[:selection].permit(book_ids: [])
     @selection.save
     redirect_to '/'
