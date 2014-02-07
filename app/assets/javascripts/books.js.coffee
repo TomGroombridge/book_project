@@ -36,4 +36,4 @@ $ ->
 
     bookView(books, $currentBook, newIndex)
 
-  find_selected_number()
+    

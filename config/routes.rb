@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 root :to => "selections#new"
 
   resources :selections
+  resources :show
   resources :books 
   #  do 
   # end
