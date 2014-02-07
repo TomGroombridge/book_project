@@ -6,6 +6,7 @@ root :to => "selections#new"
 
   resources :suggestions
   resources :selections
+  resources :show
   resources :books 
   #  do 
   # end
