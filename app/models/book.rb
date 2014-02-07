@@ -1,4 +1,4 @@
- class Book < ActiveRecord::Base
+class Book < ActiveRecord::Base
   has_and_belongs_to_many :selections
   # before_create :get_stuff
 
@@ -11,6 +11,12 @@
       preexisting_book ? preexisting_book : Book.create(book_details)
     end
   end
+
+  def self.top_10_books
+    all.sort_by { |book| -book.selections.length }.first(10)
+  end
+
+
 
 
  
