@@ -34,6 +34,4 @@ $ ->
     if !books[newIndex]
       newIndex = 0
 
-    bookView(books, $currentBook, newIndex)
-
-    
+    bookView(books, $currentBook, newIndex) 
