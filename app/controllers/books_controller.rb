@@ -1,9 +1,5 @@
 class BooksController < ApplicationController
 
-	def new
-		@book = Book.new
-	end
-
 	def create
 		@books = Book.find_top_matches(params[:book][:title])
 		# @book.user = current_user
@@ -11,12 +7,13 @@ class BooksController < ApplicationController
 		render json: @books.to_json
 	end
 
-	def update
-		
+	def index
+ 		@top_books = Book.top_10_books
 	end
 
-	# def index 
-	# 	@books = Book.all
-	# end
+
+	def index 
+		@books = Book.all
+	end
 
 end

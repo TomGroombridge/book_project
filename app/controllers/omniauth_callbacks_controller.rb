@@ -6,8 +6,5 @@ class OmniauthCallbacksController < ApplicationController
     flash[:notice] = "Signed in successfully."
     redirect_to '/'
 	end
-
-	# def failure
-	# 	raise 'fuck'
-	# end
+	
 end

@@ -6,8 +6,6 @@ class SelectionsController < ApplicationController
   end
 
   def create
-    # params[:selection][:book_ids] = ['3', '5', '7']
-
     @selection = Selection.new params[:selection].permit(book_ids: [])
     @selection.save
     redirect_to '/'
@@ -17,5 +15,6 @@ class SelectionsController < ApplicationController
   def show
     @selection = Selection.find params[:id]
     @books = @selection.books
+    @top_books = Book.top_10_books
   end 
 end

@@ -1,6 +1,7 @@
- class Book < ActiveRecord::Base
+class Book < ActiveRecord::Base
   has_and_belongs_to_many :selections
   # before_create :get_stuff
+
 
   def self.find_top_matches(title)
     books = AmazonBookFetcher.new.search(title)
@@ -17,6 +18,24 @@
     # end
 
   end
+
+  def self.top_10_books
+    all.sort_by { |book| -book.selections.length }.first(10)
+  end
+
+
+  def self.top_10_books
+    top_ten = all.sort_by { |book| -book.selections.length }.first(10)
+  end
+
+  def self.book_cover_porn
+    top_ten = all.sort_by { |book| -book.selections.length }.first(100)
+  end
+
+  def show_selection_count
+
+  end
+
 
 
  

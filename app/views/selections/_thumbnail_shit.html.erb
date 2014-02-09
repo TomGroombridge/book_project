@@ -1,0 +1,90 @@
+
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div id="grid" class="main">
+                <div class="view">
+                    <div class="view-back">
+                        <span data-icon="A">566</span>
+                        <span data-icon="B">124</span>
+                        <a href="#">&rarr;</a>
+                    </div>
+                    <img src="../../assets/images/1.jpg" />
+                </div>
+                <div class="view">
+                    <div class="view-back">
+                        <span data-icon="A">210</span>
+                        <span data-icon="B">102</span>
+                        <a href="http://www.flickr.com/photos/ag2r/5629018757/in/photostream">&rarr;</a>
+                    </div>
+                    <img src="images/2.jpg" />
+                </div>
+                <div class="view">
+                    <div class="view-back">
+                        <span data-icon="A">690</span>
+                        <span data-icon="B">361</span>
+                        <a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+                    </div>
+                    <img src="images/3.jpg" />
+                </div>
+                <div class="view">
+                    <div class="view-back">
+                        <span data-icon="A">987</span>
+                        <span data-icon="B">130</span>
+                        <a href="http://www.flickr.com/photos/ag2r/6131126901/in/photostream">&rarr;</a>
+                    </div>
+                    <img src="images/4.jpg" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript"> 
+            
+            Modernizr.load({
+                test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+                yep : ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','js/jquery.hoverfold.js'],
+                nope: 'css/fallback.css',
+                callback : function( url, result, key ) {
+                        
+                    if( url === 'js/jquery.hoverfold.js' ) {
+                $( '#grid' ).hoverfold();
+                    }
+
+                }
+            });
+                
+        </script>
+
+    <script>    
+    ( function( $ ) {
+    
+    $.fn.hoverfold = function( args ) {
+
+        this.each( function() {
+        
+            $( this ).children( '.view' ).each( function() {
+            
+                var $item   = $( this ),
+                    img     = $item.children( 'img' ).attr( 'src' ),
+                    struct  = '<div class="slice s1">';
+                        struct  +='<div class="slice s2">';
+                            struct  +='<div class="slice s3">';
+                                struct  +='<div class="slice s4">';
+                                    struct  +='<div class="slice s5">';
+                                    struct  +='</div>';
+                                struct  +='</div>';
+                            struct  +='</div>';
+                        struct  +='</div>';
+                    struct  +='</div>';
+                    
+                var $struct = $( struct );
+                
+                $item.find( 'img' ).remove().end().append( $struct ).find( 'div.slice' ).css( 'background-image', 'url(' + img + ')' ).prepend( $( '<span class="overlay" ></span>' ) );
+                
+            } );
+            
+        });
+
+    };
+
+} )
+
+</script>
