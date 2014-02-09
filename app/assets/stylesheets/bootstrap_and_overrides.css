@@ -303,6 +303,16 @@ color: #999;
 }
 
 .top-books {
-  height: 500px;
+  height: 450px;
   overflow: scroll;
 }
+
+.top100books h3 {
+  font-family: 'Special Elite', cursive;
+}
+
+/*.thumbnail {
+  width: 400px;
+  height: auto;
+
+}*/
