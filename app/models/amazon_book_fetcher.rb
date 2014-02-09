@@ -74,7 +74,8 @@ class AmazonBookFetcher
         book_details[key.underscore] = book[key]
       end
 
-      book_details ['asin'] = book["ASIN"]
+      book_details['thumbnail'] = book["SmallImage"]["URL"]
+      book_details['asin'] = book["ASIN"]
       book_details['image_url'] = book["LargeImage"]["URL"]
       book_details['author'] = [*book["ItemAttributes"]["Author"]].join(" and ")
       book_details['content'] = book["EditorialReviews"]["EditorialReview"]["Content"] rescue "No description"

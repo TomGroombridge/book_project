@@ -12,37 +12,16 @@
  
   </head>
   <body>
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Dog Eared Books</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
  
     <!-- Body of web page goes inside container tags -->
   <div class="container">
     <div class="col-xs-12 col-md-12">
       <div class="row">
-        <div class="col-xs-12 col-md-4 col-md-offset-2" id="top">
+        <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
           <h1>#dogearedpages</h1>
         </div>
 
-        <div class="col-xs-12 col-md-3 col-md-offset-2" id="top">
+        <div class="col-xs-12 col-md-3 col-md-offset-3" id="top">
           <p>A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
         </div>
        </div>
@@ -50,7 +29,7 @@
        <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" id="title">
           <%= form_for @book do |f| %>
-            <%= f.text_field :title, 'ng-model' => 'title' %>
+            <%= f.text_field :title, class: "form-control" %>
             <%= f.submit "Submit" %> 
           <% end %>
         </div>
@@ -62,10 +41,10 @@
           <div class="col-md-4 book" data-book-id="1" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
               <div class="panel-image">
-                <img src="images/mrtickle.jpg" class="panel-image-preview" />
+                <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
               </div>
               <div class="panel-body">
-                <h2>Mr Tickle</h2>
+                <h2>Title</h2>
                 <h4></h4>
                 <button class="btn-success next_book" id="choose_another">Next</button>
               </div>
@@ -75,10 +54,10 @@
           <div class="col-md-4 book" data-book-id="2" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
               <div class="panel-image">
-                <img src="images/mrtickle.jpg" class="panel-image-preview" />
+                <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
               </div>
               <div class="panel-body">
-                <h2>Mr Tickle</h2>
+                <h2>Title</h2>
                 <h4></h4>
                 <button class="btn-success next_book" id="choose_another">Wrong Cover</button>
               </div>
@@ -88,10 +67,10 @@
           <div class="col-md-4 book" data-book-id="3" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
               <div class="panel-image">
-                <img src="images/mrtickle.jpg" class="panel-image-preview" />
+                <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
               </div>
               <div class="panel-body">
-                <h2>Mr Tickle</h2>
+                <h2>Title</h2>
                 <h4></h4>
                 <button class="btn-success next_book" id="choose_another">Wrong cover?</button>
               </div>
@@ -101,8 +80,6 @@
 
       <div class="row" id="buttons">
         <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
-         
-            <button class="btn btn-huge btn-twitter"><i class="fa fa-twitter"></i>&nbsp; &nbsp;Share</button>
             <li>
             <%= form_for @selection do |f| %>
               <%= f.hidden_field 'book_ids', multiple: true, value: '6' %>
