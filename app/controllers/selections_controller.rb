@@ -15,5 +15,6 @@ class SelectionsController < ApplicationController
   def show
     @selection = Selection.find params[:id]
     @books = @selection.books
+    @top_books = Book.top_10_books
   end 
 end

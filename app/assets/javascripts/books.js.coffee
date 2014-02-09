@@ -20,8 +20,8 @@ $ ->
       $emptyBook = $('.book[data-filled="false"]:first')
 
       bookView(books, $emptyBook, 0)
-      # bookId = $emptyBook.attr("data-book-id")
-      # $('#book'+bookId).val books[0].id
+      bookId = $emptyBook.attr("data-book-id")
+      $('#book'+bookId).val books[0].id
 
       $emptyBook.attr('data-filled', true)
       $emptyBook.data('all-books', books)
