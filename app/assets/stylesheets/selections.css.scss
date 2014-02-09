@@ -110,6 +110,11 @@
     transition-delay: 1.0s;
 }
 
+.view-third:hover::-webkit-scrollbar p { 
+    transform: translateX(0px) rotate(0deg);
+    transition-delay: 1.0s;
+}
+
 
 
 

@@ -8,7 +8,24 @@
       <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
       <link href="main.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1 maximum-scale=1">
+      <link rel="stylesheet" href="css/buttons.css">
+
+
+      <meta name="viewport" content="initial-scale=1 maximum-scale=1">
+
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <meta name="description" content="3D Thumbnail Hover Effects" />
+      <meta name="keywords" content="3d, 3dtransform, hover, effect, thumbnail, overlay, curved, folded" />
+      <meta name="author" content="Codrops" />
+      <link rel="shortcut icon" href="../favicon.ico"> 
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/style_common.css" />
+      <link rel="stylesheet" type="text/css" href="css/style1.css" />
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
+      <script type="text/javascript" src="js/modernizr.custom.69142.js"></script> 
  
   </head>
   <body>
@@ -30,7 +47,7 @@
         <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" id="title">
           <%= form_for @book do |f| %>
             <%= f.text_field :title, class: "form-control" %>
-            <%= f.submit "Submit" %> 
+            <%= f.submit "Submit", class: "button button-flat-caution" %> 
           <% end %>
         </div>
        </div>
@@ -40,14 +57,19 @@
         <div class="row">
           <div class="col-md-4 book" data-book-id="1" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
+              <div class="view view-third">
               <div class="panel-image">
                 <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
               </div>
+                <div class="mask">
               <div class="panel-body">
-                <h2>Title</h2>
-                <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Next</button>
+                  <h2></h2>
+                  <h4></h4>
+                  <p></p>
+                </div>
               </div>
+              </div>
+                <button class="btn-success next_book" id="choose_another">Next</button>
             </div>
           </div>
 
@@ -110,14 +132,4 @@
 
 
 <!--this is the code for the autocomplete-->
-<script>
-var tags = [ "wind in the willows", "bounce", "wind in the willows 2", "javascript", "asp", "ruby" ];
-$( "#autocomplete" ).autocomplete({
-  source: function( request, response ) {
-          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-          response( $.grep( tags, function( item ){
-              return matcher.test( item );
-          }) );
-      }
-});
-</script>
+
