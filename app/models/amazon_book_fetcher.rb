@@ -18,7 +18,9 @@ class AmazonBookFetcher
 
   private
 
-  def search_params(title)
+  def search_params(title_and_author)
+    title, author = title_and_author.split(" by ")
+      
     {
       'Service' => 'AWSECommerceService',
       'AWSAccessKeyId' => 'AKIAJDSSWRQYZB7YML4Q',
@@ -27,7 +29,7 @@ class AmazonBookFetcher
       'SearchIndex' => 'Books',
       # 'Power' => 'title:To%20Kill%20A%20Mockingbird%20and%20author:Harper%20Lee', 
       # 'Power' => 'title:Harry%20Potter%20and%20author:Rowling',
-      'Power' => URI.escape("title:#{title}"),
+      'Power' => URI.escape("title:#{title} and author:#{author}"),
       # 'Title' => 'Outliers',
       'Sort' => 'salesrank',  
       # 'Keywords' => URI.escape('To Kill A Mockingbird'),

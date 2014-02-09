@@ -48,17 +48,16 @@
        </div>
 
        <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" id="title">
           <%= form_for @book do |f| %>
             <%= f.text_field :title, 'ng-model' => 'title' %>
             <%= f.submit "Submit" %> 
           <% end %>
         </div>
        </div>
-       <div class="row" id="input">
-        <h1>{{ title }}</h1>
+       <div class='notice'>
+        <%= flash[:notice] %>
        </div>
-
         <div class="row">
           <div class="col-md-4 book" data-book-id="1" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
@@ -83,7 +82,7 @@
               <div class="panel-body">
                 <h2>Mr Tickle</h2>
                 <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Next</button>
+                <button class="btn-success next_book" id="choose_another">Wrong Cover</button>
               </div>
             </div>
           </div>
@@ -96,7 +95,7 @@
               <div class="panel-body">
                 <h2>Mr Tickle</h2>
                 <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Next</button>
+                <button class="btn-success next_book" id="choose_another">Wrong cover?</button>
               </div>
             </div>
           </div>
@@ -125,10 +124,8 @@
     <!-- Put just before closing body tag so pages load faster -->
     <!-- Obtain jquery javascript library from CDN -->
     <!-- Check http://code.jquery.com/ for latest version. -->
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <!-- Obtain Bootstrap javascript library from CDN (online service) so it doesn't have to be on my machine -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="main.js">
  
  
   </body>

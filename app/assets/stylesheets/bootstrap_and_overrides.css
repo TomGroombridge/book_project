@@ -83,6 +83,46 @@
     padding: 0px;
 }
 
+#book_title .ng-pristine .ng-valid .ui-autocomplete-input {
+ -webkit-appearance: none;
+ width: 630px;
+ background-color: white;
+ border: 1px solid rgb(185,185,185);
+ border-top-color: rgb(160,160,160);
+ box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+ cursor: text;
+ font-family: 'Special Elite', cursive;
+ height: 36px;
+ position: relative;
+}
+
+.ui-menu .ui-menu-item a{
+    color: #96f226;
+    border-radius: 0px;
+    border: 1px solid #454545;
+}
+
+.ui-autocomplete { 
+ background-color: red;  
+ text-align: right;
+ cursor: pointer;
+ display: block; 
+ width: 100%; 
+ letter-spacing: 4px;        
+ text-shadow: 0 0 2px black;       
+ word-spacing: 20px;               
+}*/
+
+  /*.ui-autocomplete li.ui-menu-item {
+     padding: 1px;  // needed to prevent the item sizes from changing on hover
+   }
+   .ui-autocomplete a.ui-menu-item-alternate {
+     background-color: White;  // alternate item bgcolor
+   }
+   .ui-autocomplete a.ui-state-hover {
+     font-weight: normal !important;  // rather not bold the hover item (changes the width)
+   }*/
+
 /* Mobiles and small tablets*/
 
 /* need to give body or html a size to float buttons relative? */
