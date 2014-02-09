@@ -55,6 +55,9 @@
           <% end %>
         </div>
        </div>
+       <div class='notice'>
+        <%= flash[:notice] %>
+       </div>
         <div class="row">
           <div class="col-md-4 book" data-book-id="1" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
@@ -79,7 +82,7 @@
               <div class="panel-body">
                 <h2>Mr Tickle</h2>
                 <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Next</button>
+                <button class="btn-success next_book" id="choose_another">Wrong Cover</button>
               </div>
             </div>
           </div>
@@ -92,7 +95,7 @@
               <div class="panel-body">
                 <h2>Mr Tickle</h2>
                 <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Next</button>
+                <button class="btn-success next_book" id="choose_another">Wrong cover?</button>
               </div>
             </div>
           </div>
