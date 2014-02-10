@@ -28,6 +28,11 @@
     left: 0
 }
 
+.view .content p {
+    max-height: 320px;
+    overflow: scroll;
+}
+
 .view img {
     display: block;
     position: relative;
