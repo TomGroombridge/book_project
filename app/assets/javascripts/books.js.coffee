@@ -28,7 +28,7 @@ $ ->
 # this code is what happens when you hit bunmit after entering a title
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
-  
+
 
     $.post '/books', $(this).serialize(), (books) ->
       if books.error
