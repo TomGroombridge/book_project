@@ -15,7 +15,7 @@ $ ->
 
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
-    $("#book_title").val " "
+   
 
     $.post '/books', $(this).serialize(), (books) ->
       if books.error
@@ -29,6 +29,7 @@ $ ->
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
+        $("#book_title").val " "
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
