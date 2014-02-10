@@ -22,7 +22,6 @@
       <meta name="author" content="Codrops" />
       <link rel="shortcut icon" href="../favicon.ico"> 
       <link rel="stylesheet" type="text/css" href="css/demo.css" />
-      <link href="moblie.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/style_common.css" />
       <link rel="stylesheet" type="text/css" href="css/style1.css" />
       <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
@@ -33,81 +32,30 @@
   </head>
   <body>
  
-    <!-- Body of web page goes inside container tags -->
-  <div class="container" id="webbrowser">
+  <div class="container">
     <div class="col-xs-12 col-md-12">
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
-          <h1>#dogearedpages</h1>
+          <h1>
+            #dogearedpages
+          </h1>
         </div>
 
-        <div class="col-xs-12 col-md-3 col-md-offset-3" id="top">
-          <p>A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
-        </div>
-       </div>
-
-       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" id="title">
-          <%= form_for @book do |f| %>
-            <div class='title-wrapper'>
-              <%= f.text_field :title, class: "form-control" %>
-            </div>
-            <%= f.submit "Submit", class: "button button-flat-caution" %> 
-          <% end %>
-        </div>
-       </div>
-
-       <div class='notice'>
-        <%= flash[:notice] %>
-       </div>
-
-        <div class="row">
-          <div class="col-md-4 book" data-book-id="1" data-filled='false'>
-            <div class="panel panel-default" id="threebooks">
-              <div class="view view-third">
-              <div class="panel-image">
-                <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
-              </div>
-                <div class="mask">
-              <div class="panel-body">
-                  <h2></h2>
-                  <h4></h4>
-                  <p></p>
-                </div>
-              </div>
-              </div>
-                <button class="btn-success next_book" id="choose_another">Press for new cover</button>
-            </div>
+          <div class="col-xs-12 col-md-3 col-md-offset-3" id="top">
+            <p>
+              A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives
+            </p>
           </div>
 
+      </div>
 
 
-          <div class="col-md-4 book" data-book-id="2" data-filled='false'>
-            <div class="panel panel-default" id="threebooks">
-              <div class="panel-image">
-                <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
-              </div>
-              <div class="panel-body">
-                <h2>Title</h2>
-                <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Wrong Cover</button>
-              </div>
-            </div>
-          </div>
+       <%= render "submit_button" %>
 
-          <div class="col-md-4 book" data-book-id="3" data-filled='false'>
-            <div class="panel panel-default" id="threebooks">
-              <div class="panel-image">
-                <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
-              </div>
-              <div class="panel-body">
-                <h2>Title</h2>
-                <h4></h4>
-                <button class="btn-success next_book" id="choose_another">Wrong cover?</button>
-              </div>
-            </div>
-          </div>
-        </div>
+       <%= render "three_book_layout" %> 
+
+       
+
       <div class="row" id="buttons">
         <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
             <li>
@@ -125,75 +73,6 @@
       </div>
       
     </div> <!-- /container -->
-
-          <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
-
-
-    <div id="wrapper" id="mobile">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#">Your three Books</a>
-                </li>
-                <img src="images/mr_bump.jpg" style="height: 70px">
-                <li><a href="#">Mr Bump</a>
-                </li>
-                <img src="images/Mr._Tickle.jpg" style="height: 70px">
-                <li><a href="#">Mr Tickle</a>
-                </li>
-                <img src="images/mr-strong.jpg" style="height: 70px">
-                <li><a href="#">Mr Strong</a>
-                </li>
-                <a id="menu-close" href="#" class="btn btn-default"><i class="icon-reorder"></i>Select another</a>
-                <a href="showbooks.html" class="btn btn-default"><i class="icon-reorder"></i>Share</a>
-            </ul>
-        </div>
-
-        <!-- Page content -->
-        <div id="page-content-wrapper">
-            <div class="content-header">
-                <h2>
-                    #dogearedpages
-                </h2>
-            </div>
-            <!-- Keep all page content within the page-content inset div! -->
-            <div class="page-content inset">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="lead">A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
-                    </div>
-                    <div class="col-s-10 col-md-6 col-md-offset-3">
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Enter your first choice...">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">DROPDOWN & ERROR MESSAGE AREA</p>
-                    </div>
-                    <div class="col-s-4">
-                        <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i>Show my Books</a>
-                    </div>
-                    <div class="col-s-4">
-                        <a href="showbooks.html" class="btn btn-default"><i class="icon-reorder"></i>Share</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
  
     <!-- Put just before closing body tag so pages load faster -->
@@ -201,22 +80,8 @@
     <!-- Check http://code.jquery.com/ for latest version. -->
     <!-- Obtain Bootstrap javascript library from CDN (online service) so it doesn't have to be on my machine -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
-        <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-    });
-    </script>
-
-    <script>
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass();
-    });
-    </script>
- 
- 
+    
+  
   </body>
 </html>
 

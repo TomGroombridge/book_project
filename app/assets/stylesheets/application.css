@@ -13,6 +13,8 @@
  *= require bootstrap_and_overrides
  *= require jquery.ui.all
  *= require fancyInput
+ *= require animate.min
+ *= require magic.min
  *= require_tree .
  *= require_self
  */

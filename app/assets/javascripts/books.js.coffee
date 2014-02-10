@@ -13,11 +13,19 @@ $ ->
     bookId = book.attr("data-book-id")
     $('#book'+bookId).val books[index].id
 
-  $("#book_title").fancyInput();
 
+# this bit of code is for using a special text editor on the search bar
+# $("#book_title").fancyInput();
+
+
+
+
+
+
+# this code is what happens when you hit bunmit after entering a title
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
-    $("#book_title").val " "
+  
 
     $.post '/books', $(this).serialize(), (books) ->
       if books.error
@@ -31,6 +39,8 @@ $ ->
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
+        $emptyBook.addClass('magictime '); #this is for using the cool css tricks
+        $("#book_title").val " "
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
