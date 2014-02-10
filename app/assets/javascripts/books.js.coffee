@@ -15,7 +15,6 @@ $ ->
 
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
-   
 
     $.post '/books', $(this).serialize(), (books) ->
       if books.error
