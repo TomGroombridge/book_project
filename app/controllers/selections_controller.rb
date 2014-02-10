@@ -7,13 +7,16 @@ class SelectionsController < ApplicationController
 
   def create
     @selection = Selection.new params[:selection].permit(book_ids: [])
-      @selection.save
-    if @selection.user = current_user
-      redirect_to "/users/#{current_user.name}"
-    else 
-      redirect_to selection_path @selection
-    end
+    @selection.user = current_user
+    @selection.save
+      if current_user
+        redirect_to "/users/#{current_user.name}"
+      else
+        redirect_to selection_path @selection
+      end
   end
+
+  
 
 
   def show

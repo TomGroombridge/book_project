@@ -13,13 +13,9 @@
 	  
 	</head>
 		<body>
-
-			<ul class="hmenu">
-			  <%= render 'devise/menu/registration_items' %>
-			  <%= render 'devise/menu/login_items' %>
-			</ul> 
-
-
+                   <li> <%= link_to user_omniauth_authorize_path(:twitter) do %>  <i class="fa fa-twitter fa-2x"></i>
+                     <% end %>
+                   </li>    
 				<%= yield %>
 					<p class="notice"><%= notice %></p>
 					<p class="alert"><%= alert %></p>
