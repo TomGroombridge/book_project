@@ -15,17 +15,20 @@ $ ->
 
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
+    $("#book_title").val " "
 
     $.post '/books', $(this).serialize(), (books) ->
-      console.log books
-      $emptyBook = $('.book[data-filled="false"]:first')
+      if books.error
+        alert("No book found with that title")
+      else
+        $emptyBook = $('.book[data-filled="false"]:first')
 
-      bookView(books, $emptyBook, 0)
-      bookId = $emptyBook.attr("data-book-id")
-      $('#book'+bookId).val books[0].id
+        bookView(books, $emptyBook, 0)
+        bookId = $emptyBook.attr("data-book-id")
+        $('#book'+bookId).val books[0].id
 
-      $emptyBook.attr('data-filled', true)
-      $emptyBook.data('all-books', books)
+        $emptyBook.attr('data-filled', true)
+        $emptyBook.data('all-books', books)
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')

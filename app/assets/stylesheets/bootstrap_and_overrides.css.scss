@@ -17,7 +17,7 @@
   
   /*background-image:image-url("stardust.png");*/
   /*background-image: url("http://4.bp.blogspot.com/-rEXpk6NLPhU/UQ32u8KL3JI/AAAAAAAAAuo/hBVZMp6io1c/s1600/Bookcase%2B-%2BRoald%2BDahl.jpg");*/
-  background-image: image-url("green_dust_scratch.png");
+  background-image: image-url("whitebrick.jpg");
   background-position: fixed;
   background-size: 100%;
   background-repeat: none;
@@ -120,15 +120,16 @@
  height: 36px;
  position: relative;
 }*/
-
+/*
 .ui-menu .ui-menu-item a{
     color: #000000;
     border-radius: 0px;
     border: 1px solid #454545;
 }
-
-.ui-autocomplete { 
- background-color: red;  
+*/
+/*.ui-autocomplete { */
+.ui-menu .ui-menu-item a{
+/* background-color: red;  
  text-align: left;
  cursor: pointer;
  display: block; 
@@ -136,18 +137,22 @@
  letter-spacing: 4px;        
  text-shadow: 0 0 2px black;       
  word-spacing: 20px;               
+*/
+  font-family: 'Special Elite'
 }
 
-.form-control {
+#book_title {
   -webkit-appearance: none;
- width: 150px;
- background-color: #A22C2C;
+ display: inline-block;
+ align: center;
+ width: 1000px;
+ background-color: white;
  border: 1px solid rgb(185,185,185);
  border-top-color: rgb(160,160,160);
  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
  cursor: text;
  font-family: 'Special Elite', cursive;
- height: 36px;
+ height: 75px;
  position: relative;
 }
 
