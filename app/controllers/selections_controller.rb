@@ -8,7 +8,7 @@ class SelectionsController < ApplicationController
   def create
     @selection = Selection.new params[:selection].permit(book_ids: [])
     @selection.save
-    redirect_to '/'
+    redirect_to selection_path @selection
   end
 
 
