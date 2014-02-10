@@ -26,6 +26,10 @@
   margin-top:20px;
 }
 
+#mobile {
+  display: none;
+}
+
 #intro {
   background-color: #fff;
 }
@@ -177,6 +181,15 @@
   html {
   size: 100%;
   }
+
+  #webbrowser {
+  display: none;
+  }
+
+  #mobile {
+  display: block;
+  }
+
 
   .jumbotron {
   display: none;
