@@ -8,6 +8,7 @@ $ ->
     book.find('img').attr('src', books[index].image_url)
     book.find('h2').text(books[index].title)
     book.find('h4').text(books[index].author)
+    book.find('p').text(books[index].content)
     book.data('book-index', index)
     bookId = book.attr("data-book-id")
     $('#book'+bookId).val books[index].id

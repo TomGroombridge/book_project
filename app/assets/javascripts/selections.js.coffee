@@ -4,4 +4,4 @@
 
 
 $ ->
-  $('#book_title').autocomplete({ source: '/suggestions.json', minLength: 5, autoFocus: true })
+  $('#book_title').autocomplete({ source: '/suggestions.json', minLength: 5, autoFocus: false })

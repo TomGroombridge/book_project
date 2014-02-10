@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140207115108) do
+ActiveRecord::Schema.define(version: 20140209175639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140207115108) do
     t.integer  "sales_rank"
     t.text     "content"
     t.string   "asin"
+    t.string   "thumbnail"
   end
 
   create_table "books_selections", id: false, force: true do |t|
