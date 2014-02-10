@@ -32,7 +32,7 @@
   <body>
  
     <!-- Body of web page goes inside container tags -->
-  <div class="container" id="webbrowser">
+  <div id="webbrowser">
     <div class="col-xs-12 col-md-12">
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
@@ -45,16 +45,14 @@
        </div>
 
        <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" id="title">
+        <div class="col-xs-10 col-xs-offset-1" id="title">
           <%= form_for @book do |f| %>
             <%= f.text_field :title, class: "form-control" %>
             <%= f.submit "Submit", class: "button button-flat-caution" %> 
           <% end %>
         </div>
        </div>
-       <div class='notice'>
-        <%= flash[:notice] %>
-       </div>
+        
         <div class="row">
           <div class="col-md-4 book" data-book-id="1" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
@@ -118,12 +116,18 @@
         </div>
       </div>
       
+<<<<<<< HEAD
+    </div> 
+    </div><!-- /container -->
+=======
     </div> <!-- /container -->
+  </div>
+>>>>>>> 02be4d4f9fd8c243054a065dd65b3d7df76c6ebd
 
           <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
 
 
-    <div id="wrapper" id="mobile">
+    <div id="mobile">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -131,7 +135,6 @@
                 <li class="sidebar-brand"><a href="#">Your three Books</a>
                 </li>
                 <img src="images/mr_bump.jpg" style="height: 70px">
-                <li><a href="#">Mr Bump</a>
                 </li>
                 <img src="images/Mr._Tickle.jpg" style="height: 70px">
                 <li><a href="#">Mr Tickle</a>
@@ -142,6 +145,11 @@
                 <a id="menu-close" href="#" class="btn btn-default"><i class="icon-reorder"></i>Select another</a>
                 <a href="showbooks.html" class="btn btn-default"><i class="icon-reorder"></i>Share</a>
             </ul>
+
+
+
+
+
         </div>
 
         <!-- Page content -->
@@ -158,9 +166,11 @@
                         <p class="lead">A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
                     </div>
                     <div class="col-s-10 col-md-6 col-md-offset-3">
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Enter your first choice...">
-                        </div>
+                        <div class="form-group" id="title">        
+                          <%= form_for @book do |f| %>
+                            <%= f.text_field :title, class: "form-control" %>
+                            <%= f.submit "Submit", class: "button button-flat-caution" %> 
+                          <% end %>
                     </div>
                     <div class="col-md-4">
                         <p class="well">DROPDOWN & ERROR MESSAGE AREA</p>
@@ -168,6 +178,26 @@
                     <div class="col-s-4">
                         <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i>Show my Books</a>
                     </div>
+                    
+
+                    <div class="col-md-4 book" data-book-id="1" data-filled='false'>
+                      <div class="panel panel-default" id="threebooks">
+                      <div class="view view-third">
+                      <div class="panel-image">
+                        <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
+                      </div>
+                        <div class="mask">
+                      <div class="panel-body">
+                          <h2></h2>
+                          <h4></h4>
+                          <p></p>
+                        </div>
+                      </div>
+                      </div>
+                        <button class="btn-success next_book" id="choose_another">Press for new cover</button>
+                      </div>
+                    </div>
+
                     <div class="col-s-4">
                         <a href="showbooks.html" class="btn btn-default"><i class="icon-reorder"></i>Share</a>
                     </div>
@@ -177,6 +207,8 @@
 
     </div>
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -188,25 +220,29 @@
 
 
 
-  </div>
+
+>>>>>>> 02be4d4f9fd8c243054a065dd65b3d7df76c6ebd
  
     <!-- Put just before closing body tag so pages load faster -->
     <!-- Obtain jquery javascript library from CDN -->
     <!-- Check http://code.jquery.com/ for latest version. -->
     <!-- Obtain Bootstrap javascript library from CDN (online service) so it doesn't have to be on my machine -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-        <script>
-    $("#menu-toggle").click(function(e) {
+
+
+    <script>
+      $("#menu-toggle").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("active");
-    });
+        $("#sidebar-wrapper").toggleClass("active");
+      });
     </script>
 
     <script>
     $("#menu-close").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass();
+        $("#sidebar-wrapper").toggleClass();
     });
     </script>
  

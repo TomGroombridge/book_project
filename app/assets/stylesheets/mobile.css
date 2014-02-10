@@ -90,10 +90,16 @@
   
 #wrapper {
   padding-left: 0;
+  display: block;
 }
 
 #sidebar-wrapper {
   left: 0;
+  display: block;
+}
+
+#sidebar-wrapper.active {
+  margin-left: 0;
 }
 
 #wrapper.active {
