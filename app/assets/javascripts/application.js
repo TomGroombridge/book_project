@@ -17,6 +17,3 @@
 //= require angular
 //= require_tree .
 
-
-// this allows the angular to be accesibe in our application.html.erb
-angular.module('bookspiration', [])

@@ -1,37 +1,3 @@
-
-<html>
-  <head>
-    <title>Books</title>
-    <!-- Obtain Bootstrap style sheet from CDN (online service) so it doesn't have to be on my machine -->
-    <!-- Check http://www.bootstrapcdn.com/ for latest version. -->
-      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-      <link href="main.css" rel="stylesheet">
-      <link href='http://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="css/buttons.css">
-
-
-      <meta name="viewport" content="initial-scale=1 maximum-scale=1">
-
-
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-      <meta name="description" content="3D Thumbnail Hover Effects" />
-      <meta name="keywords" content="3d, 3dtransform, hover, effect, thumbnail, overlay, curved, folded" />
-      <meta name="author" content="Codrops" />
-      <link rel="shortcut icon" href="../favicon.ico"> 
-      <link rel="stylesheet" type="text/css" href="css/demo.css" />
-      <link href="moblie.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="css/style_common.css" />
-      <link rel="stylesheet" type="text/css" href="css/style1.css" />
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
-      <script type="text/javascript" src="js/modernizr.custom.69142.js"></script> 
- 
-  </head>
-  <body>
- 
-    <!-- Body of web page goes inside container tags -->
   <div id="webbrowser">
     <div class="col-xs-12 col-md-12">
       <div class="row">
@@ -40,11 +6,11 @@
         </div>
 
         <div class="col-xs-12 col-md-3 col-md-offset-3" id="top">
-          <p>A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
+          <p>Books can change you life</p>
         </div>
        </div>
 
-       <div class="row">
+       <div class="row search-row">
         <div class="col-xs-10 col-xs-offset-1" id="title">
           <%= form_for @book do |f| %>
             <%= f.text_field :title, class: "form-control" %>
@@ -115,14 +81,12 @@
             </li>   
         </div>
       </div>
-      
-<<<<<<< HEAD
+      <%= render :partial => 'layouts/footer' %>
     </div> 
+   
+
+   
     </div><!-- /container -->
-=======
-    </div> <!-- /container -->
-  </div>
->>>>>>> 02be4d4f9fd8c243054a065dd65b3d7df76c6ebd
 
           <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
 
@@ -206,50 +170,4 @@
         </div>
 
     </div>
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 02be4d4f9fd8c243054a065dd65b3d7df76c6ebd
- 
-    <!-- Put just before closing body tag so pages load faster -->
-    <!-- Obtain jquery javascript library from CDN -->
-    <!-- Check http://code.jquery.com/ for latest version. -->
-    <!-- Obtain Bootstrap javascript library from CDN (online service) so it doesn't have to be on my machine -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-
-
-    <script>
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-      });
-    </script>
-
-    <script>
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass();
-    });
-    </script>
- 
- 
-  </body>
-</html>
-
-
-<!--this is the code for the autocomplete-->
-
+  </div>
