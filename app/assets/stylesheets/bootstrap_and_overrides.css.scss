@@ -415,3 +415,14 @@ color: #999;
 
 }*/
 
+.col-lg-offset-2 {
+   border: 10px double;
+   padding: 10px;
+   background-color: black;
+   background-position: center left;
+   /* The background will be inside the padding */ 
+   background-origin: content-box;
+}
+
+
+

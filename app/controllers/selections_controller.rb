@@ -7,9 +7,16 @@ class SelectionsController < ApplicationController
 
   def create
     @selection = Selection.new params[:selection].permit(book_ids: [])
+    @selection.user = current_user
     @selection.save
-    redirect_to selection_path @selection
+      if current_user
+        redirect_to "/users/#{current_user.name}"
+      else
+        redirect_to selection_path @selection
+      end
   end
+
+  
 
 
   def show
@@ -17,4 +24,14 @@ class SelectionsController < ApplicationController
     @books = @selection.books
     @top_books = Book.top_10_books
   end 
+
+
+  def showuser
+    user = User.find_by(:name => params[:username])
+    @selection = Selection.find_by(:user_id => user.id)
+    @books = @selection.books
+    @top_books = Book.top_10_books
+    render 'show'
+  end 
+
 end
