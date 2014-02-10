@@ -39,7 +39,7 @@ $ ->
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
-        $emptyBook.addClass('magictime '); #this is for using the cool css tricks
+        $emptyBook.addClass('magictime vanishIn'); #this is for using the cool css tricks
         $("#book_title").val " "
 
   $(".btn-success, .next_book").on "click", ->
