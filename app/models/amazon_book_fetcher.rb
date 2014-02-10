@@ -61,6 +61,8 @@ class AmazonBookFetcher
   def parse_response(response)
     parsed = Nori.new.parse(response.body)
     books = parsed["ItemSearchResponse"]["Items"]["Item"]
+    return false unless books
+    
     books.map do |book|
 
       book_details = {}

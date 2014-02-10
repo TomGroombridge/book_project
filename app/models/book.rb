@@ -5,7 +5,7 @@ class Book < ActiveRecord::Base
 
   def self.find_top_matches(title)
     books = AmazonBookFetcher.new.search(title)
-
+    return { error: "No book found" } if !books
     # if books.exist?
 
       books.compact.map do |book_details|
