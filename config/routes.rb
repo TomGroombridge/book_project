@@ -10,7 +10,6 @@ root :to => "selections#new"
   resources :show
   resources :books 
   
-
   #  do 
   # end
 

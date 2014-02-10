@@ -9,8 +9,7 @@ class SelectionsController < ApplicationController
     @selection = Selection.new params[:selection].permit(book_ids: [])
     @selection.user = current_user
     @selection.save
-    # redirect_to selection_path @selection
-        redirect_to "/users/#{current_user.name}"
+    redirect_to "/users/#{current_user.name}"
   end
 
 

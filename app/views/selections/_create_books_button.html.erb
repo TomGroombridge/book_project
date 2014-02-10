@@ -12,32 +12,12 @@
         <!-- Boxes de Acoes -->
 
     	<div class="col-xs-12 col-sm-6 col-lg-4 col-lg-offset-2 ">
-			<div class="box">							
-				<div class="icon">
-
-					<div class="image">
-						<i class="fa fa-pencil-square-o"></i>
-					</div>
-    	<a href="/users/auth/twitter">
-					<div class="info">
-						<p>
-							<h2>
-								Share your top 3 books with the world!
-								<p>
-								</p>
-							</h2>
-						</p>
-						<div class="more">
-							<a href="/users/auth/twitter" title="Title Link">
-								<img style="border:0;" src="https://dev.twitter.com/sites/default/files/images_documentation/sign-in-with-twitter-link.png" alt="HTML tutorial">
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="space"></div>
-			</div> 
-
-		</div>
+				<div class="box">							
+				<li> <%= link_to user_omniauth_authorize_path(:twitter) do %><i class="fa fa-twitter fa-2x"></i>
+					<% end %>
+				</li>
+				</div> 
+			</div>
 
 	<!-- 	    	<div class="col-xs-12 col-sm-6 col-lg-4 col-lg-offset-4 ">
 			<div class="box">							
