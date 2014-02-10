@@ -32,7 +32,7 @@
   <body>
  
     <!-- Body of web page goes inside container tags -->
-  <div class="container" id="webbrowser">
+  <div id="webbrowser">
     <div class="col-xs-12 col-md-12">
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
@@ -52,9 +52,7 @@
           <% end %>
         </div>
        </div>
-       <div class='notice'>
-        <%= flash[:notice] %>
-       </div>
+        
         <div class="row">
           <div class="col-md-4 book" data-book-id="1" data-filled='false'>
             <div class="panel panel-default" id="threebooks">
@@ -118,7 +116,8 @@
         </div>
       </div>
       
-    </div> <!-- /container -->
+    </div> 
+    </div><!-- /container -->
 
           <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
 
@@ -177,18 +176,6 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-  </div>
  
     <!-- Put just before closing body tag so pages load faster -->
     <!-- Obtain jquery javascript library from CDN -->
