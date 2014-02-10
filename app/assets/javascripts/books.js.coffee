@@ -13,6 +13,8 @@ $ ->
     bookId = book.attr("data-book-id")
     $('#book'+bookId).val books[index].id
 
+  $("#book_title").fancyInput();
+
   $('#new_book').on 'submit', (event) ->
     event.preventDefault()
     $("#book_title").val " "
