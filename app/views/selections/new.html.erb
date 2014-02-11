@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>Books</title>
@@ -30,17 +31,12 @@
  
   </head>
   <body>
-<<<<<<< HEAD
  
 
-  <div id="webbrowser">
   <div class="container">
     <!-- Body of web page goes inside container tags -->
 
-=======
-<div class="container">
   <div id="webbrowser">
->>>>>>> c8b3251bc4e95e4dee2cc9a640b6038138a2a6e1
     <div class="col-xs-12 col-md-12">
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
@@ -49,81 +45,57 @@
           </h1>
         </div>
 
+
         <div class="col-xs-12 col-md-3 col-md-offset-3" id="top">
           <p>Books can change you life</p>
         </div>
        </div>
         
 
-      <div class="col-xs-12 col-md-4 col-md-offset-3" id="top">
-        <p class="quotes">Outside of a dog, a book is a man’s best friend. Inside of a dog, it’s too dark to read. <br>Groucho Marx<br></p>
-        <p class="quotes">Writing is perhaps the greatest of human inventions, binding together people, citizens of distant epochs, who never knew one another. Books break the shackles of time—proof that humans can work magic. <br>Carl Sagan</p>
-        <p class="quotes">You know you’ve read a good book when you turn the last page and feel a little as if you have lost a friend. <br>Paul Sweeney</p>
-        <p class="quotes">Literacy is a bridge from misery to hope. <br>Kofi Annan</p>
-        <p class="quotes">Read, read, read. <br>William Faulkner</p>
-      </div>
-     </div>
-      
-     
+       <%= render "submit_button" %>
 
-     <%= render "submit_button" %>
-     <%= render "three_book_layout" %>
-    </div>
+       <%= render "three_book_layout" %> 
 
-    <div class="row" id="buttons">
-      <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
-          <li>
-          <%= form_for @selection do |f| %>
-            <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book1' %>
-            <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book2' %>
-            <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book3' %>
-            <%= f.button do %>
-              <i class="fa fa-twitter fa-5x"></i>
+       
+
+      <div class="row" id="buttons">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
+            <li>
+            <%= form_for @selection do |f| %>
+              <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book1' %>
+              <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book2' %>
+              <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book3' %>
+
+              <%= f.button do %>
+                <i class="fa fa-twitter fa-5x"></i>
+              <% end %>
             <% end %>
-          <% end %>
-          </li>   
+            </li>   
+        </div>
       </div>
 
+      <%= render :partial => 'layouts/footer' %>
+    </div> 
+   
+
+   
     </div>
 
-    <%= render :partial => 'layouts/footer' %>
- 
+      
 
-    </div>    
-  </div>
-</div> 
-
+    </div> 
 <!-- /container -->
 
 
-        <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
+          <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
 
 
-  <div id="mobile">
-
-
-      <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-          <ul class="sidebar-nav">
-              <li class="sidebar-brand"><a href="#">Your three Books</a>
-              </li>
-              <img src="images/mr_bump.jpg" style="height: 70px">
-              </li>
-              <img src="images/Mr._Tickle.jpg" style="height: 70px">
-              <li><a href="#">Mr Tickle</a>
-              </li>
-              <img src="images/mr-strong.jpg" style="height: 70px">
-              <li><a href="#">Mr Strong</a>
-              </li>
-              <a id="menu-close" href="#" class="btn btn-default"><i class="icon-reorder"></i>Select another</a>
-              <a href="showbooks.html" class="btn btn-default"><i class="icon-reorder"></i>Share</a>
-          </ul>
+    <div id="mobile">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 Your three Books
-
 
 
 
@@ -139,53 +111,6 @@
                     </div>
                   </div>
 
-      </div>
-
-      <!-- Page content -->
-      <div id="page-content-wrapper">
-          <div class="content-header">
-              <h2>
-                  #dogearedpages
-              </h2>
-          </div>
-          <!-- Keep all page content within the page-content inset div! -->
-          <div class="page-content inset">
-              <div class="row">
-                  <div class="col-md-12">
-                      <p class="lead">A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
-                  </div>
-                  <div class="col-s-10 col-md-6 col-md-offset-3">
-                      <div class="form-group" id="title">        
-                        <%= form_for @book do |f| %>
-                          <%= f.text_field :title, class: "form-control" %>
-                          <%= f.submit "Submit", class: "button button-flat-caution" %> 
-                        <% end %>
-                  </div>
-                  <div class="col-md-4">
-                      <p class="well">DROPDOWN & ERROR MESSAGE AREA</p>
-                  </div>
-                  <div class="col-s-4">
-                      <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i>Show my Books</a>
-                  </div>
-                  
-
-                  <div class="col-md-4 book" data-book-id="1" data-filled='false'>
-                    <div class="panel panel-default" id="threebooks">
-                    <div class="view view-third">
-                    <div class="panel-image">
-                      <%= image_tag("placeholder.jpg", class: "panel-image-preview") %> 
-                    </div>
-                      <div class="mask">
-                    <div class="panel-body">
-                        <h2></h2>
-                        <h4></h4>
-                        <p></p>
-                      </div>
-                    </div>
-                    </div>
-                      <button class="btn-success next_book" id="choose_another">Press for new cover</button>
-                    </div>
-                  </div>
 
                   <div class="book" data-book-id="2" data-filled='false'>
                     <div class="row">
@@ -226,33 +151,16 @@
 
         <!-- Page content -->
         <div id="page-content-wrapper">
-          <!-- Static navbar -->
-    <div class="navbar navbar-default navbar-static-top" role="navigation" id="main-nav">
-    
-      <div class="container">
-        <div class="navbar-header">
-        <a class="navbar-brand">#dogeared</a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="./">Static top</a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
+            <div class="content-header">
+                <h2>
+                    #dogearedpages
+                </h2>
+            </div>
             <!-- Keep all page content within the page-content inset div! -->
             <div class="page-content inset">
                 <div class="row">
                     <div class="col-md-12">
-                        <p>A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
+                        <p class="lead">A fun place where we can inspire our peers by sharing the three most influential literature pieces that have touched our lives</p>
                     </div>
                     <div class="col-s-10 col-md-6 col-md-offset-3">
                         <div class="form-group" id="title">        
@@ -302,7 +210,6 @@
       $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
-        $("#main-nav").toggleClass("hide");
       });
     </script>
 
@@ -310,8 +217,6 @@
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass();
-        $("#menu-toggle").toggleClass("");
-        $("#main-nav").toggleClass("hide");
     });
     </script>
  
@@ -320,12 +225,6 @@
   </body>
 </html>
 
-                  <div class="col-s-4">
-                      <a href="showbooks.html" class="btn btn-default"><i class="icon-reorder"></i>Share</a>
-                  </div>
-              </div>
-          </div>
-      </div>
 
-  </div>
+<!--this is the code for the autocomplete-->
 
