@@ -404,12 +404,18 @@ color: #999;
 .top100books h3 {
   font-family: 'Special Elite', cursive;
 }
+.top100books {
+  background-image: none
+}
 
-/*.thumbnail {
-  width: 400px;
+.thumbnail {
+  width: 80px;
   height: auto;
+  float: center;
+  margin: 5px;
+  
 
-}*/
+}
 
 
 .user-profile {
