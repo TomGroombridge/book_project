@@ -116,6 +116,14 @@ background-image: none;
 }
 
 @media (max-width:767px) {
+
+#mobile {
+  font-family: 'Special Elite', cursive;
+}
+
+.navbar-brand {
+display: inline-block;
+}
  
 .col-xs-6 h2 {
   font-size: 12px;
@@ -127,9 +135,22 @@ background-image: none;
   display: block;
 }
 
+.navbar-header p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 #sidebar-wrapper {
   left: 0;
   display: block;
+}
+
+#main-nav {
+  display: block;
+}
+
+#main-nav.hide {
+  display: none;
 }
 
 #sidebar-wrapper.active {
