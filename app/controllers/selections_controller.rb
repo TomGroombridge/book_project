@@ -12,12 +12,9 @@ class SelectionsController < ApplicationController
       if current_user
         redirect_to "/users/#{current_user.name}"
       else
-        redirect_to selection_path @selection
+        redirect_to "/users/auth/twitter" 
       end
   end
-
-  
-
 
   def show
     @selection = Selection.find params[:id]
@@ -29,7 +26,7 @@ class SelectionsController < ApplicationController
   def showuser
     user = User.find_by(:name => params[:username])
     @selection = Selection.find_by(:user_id => user.id)
-    @books = @selection.books
+    @books = @selection.books if @selection
     @top_books = Book.top_10_books
     render 'show'
   end 
