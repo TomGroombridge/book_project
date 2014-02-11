@@ -29,14 +29,14 @@ $ ->
 
         bookView(books, $emptyBook, 0)
         bookId = $emptyBook.attr("data-book-id") 
-        $('#book'+bookId).val books[0].id
+        $('.book'+bookId).val books[0].id
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
         $("#sidebar-wrapper").toggleClass("active")
 
         $(".book-title").val " "
-        $emptyBook.addClass('magictime vanishIn'); //this is for using the cool css tricks
+        $emptyBook.addClass('magictime vanishIn')
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
