@@ -15,13 +15,19 @@ $ ->
     book_desc = books[index].content
     if book_desc.length > 150
       book_desc = book_desc.substring(0,150) + "..."
-    book.find('p').text(book_desc )
+    book.find('p').html(book_desc )
     
     book.data('book-index', index)
     bookId = book.attr("data-book-id")
     $('#book'+bookId).val books[index].id
 
 
+  $('.book').on 'click', '.close', (event) ->
+    event.preventDefault()
+    $book = $(this).closest('.book')
+
+    $book.find('img').attr('src', '')
+    $book.attr('data-filled', false)
 
   $('.new_book').on 'submit', (event) ->
     event.preventDefault()
@@ -39,7 +45,6 @@ $ ->
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
         $("#sidebar-wrapper").toggleClass("active")
-
         $(".book-title").val " "
         $emptyBook.addClass('magictime vanishIn') 
   $(".btn-success, .next_book").on "click", ->
