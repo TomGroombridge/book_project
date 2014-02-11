@@ -437,5 +437,10 @@ color: #999;
    background-origin: content-box;
 }
 
+.new_book {
+  text-align: center
+}
 
-
+#book_title {
+  transition: 1s width ease;
+}

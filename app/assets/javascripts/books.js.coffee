@@ -25,12 +25,18 @@ $ ->
 
   $('.new_book').on 'submit', (event) ->
     event.preventDefault()
+    return unless $("#book_title").val()
 
-    $.post '/books', $(this).serialize(), (books) ->
+    data =  $(this).serialize()
+
+    $("#book_title").val ''
+
+    $.post '/books', data, (books) ->
       if books.error
         alert("No book found with that title")
       else
         $emptyBook = $('.book[data-filled="false"]:visible:first')
+
 
         bookView(books, $emptyBook, 0)
         bookId = $emptyBook.attr("data-book-id") 
@@ -38,10 +44,20 @@ $ ->
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
+        
+
         $("#sidebar-wrapper").toggleClass("active")
 
-        $(".book-title").val " "
+        
         $emptyBook.addClass('magictime vanishIn') 
+
+        $("#book_title").attr("placeholder", 'and another...')
+
+        if $emptyBook.data('book-id') == 3
+          $('#book_title').width(300)
+
+        # if $('.book').last().data().bookId == 3
+          # $("#book_title").html("<h1>BUSTED!</h1>")
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
     books = $currentBook.data('all-books')
