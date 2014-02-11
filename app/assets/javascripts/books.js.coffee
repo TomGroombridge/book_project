@@ -24,9 +24,7 @@ $ ->
 
 
   $('.new_book').on 'submit', (event) ->
-
     event.preventDefault()
-
 
     $.post '/books', $(this).serialize(), (books) ->
       if books.error
@@ -43,8 +41,7 @@ $ ->
         $("#sidebar-wrapper").toggleClass("active")
 
         $(".book-title").val " "
-        $emptyBook.addClass('magictime vanishIn'); //this is for using the cool css tricks
-
+        $emptyBook.addClass('magictime vanishIn') 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
     books = $currentBook.data('all-books')
