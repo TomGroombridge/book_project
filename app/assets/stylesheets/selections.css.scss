@@ -10,14 +10,15 @@
     height: relative;
     margin: 10px;
     border-radius: 5px;
-    
     border-width: 5px;
     border-color: black;
     float: left;
     overflow: hidden;
     position: relative;
     text-align: center;
-    /*box-shadow: 10px 10px 10px #000000;*/
+    -webkit-box-shadow: 0 0 40px 16px #fff;
+    -moz-box-shadow: 0 0 40px 16px #fff;
+    box-shadow: 0 0 40px 16px #fff;
     cursor: default;
     
 }

@@ -15,22 +15,34 @@ $ ->
     book_desc = books[index].content
     if book_desc.length > 150
       book_desc = book_desc.substring(0,150) + "..."
-    book.find('p').text(book_desc )
+    book.find('p').html(book_desc )
     
     book.data('book-index', index)
     bookId = book.attr("data-book-id")
     $('#book'+bookId).val books[index].id
 
 
+  $('.book').on 'click', '.close', (event) ->
+    event.preventDefault()
+    $book = $(this).closest('.book')
+
+    $book.find('img').attr('src', '')
+    $book.attr('data-filled', false)
 
   $('.new_book').on 'submit', (event) ->
     event.preventDefault()
+    return unless $("#book_title").val()
 
-    $.post '/books', $(this).serialize(), (books) ->
+    data =  $(this).serialize()
+
+    $("#book_title").val ''
+
+    $.post '/books', data, (books) ->
       if books.error
         alert("No book found with that title")
       else
         $emptyBook = $('.book[data-filled="false"]:visible:first')
+
 
         bookView(books, $emptyBook, 0)
         bookId = $emptyBook.attr("data-book-id") 
@@ -38,11 +50,19 @@ $ ->
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
+        
+
         $("#sidebar-wrapper").toggleClass("active")
 
+
+        $("#book_title").attr("placeholder", 'and another...')
+
+        if $emptyBook.data('book-id') == 3
+          $('#book_title').width(300)
+
+ 
         $(".book-title").val " "
-        $emptyBook.addClass('magictime vanishIn')
-        
+
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
     books = $currentBook.data('all-books')
