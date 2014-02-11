@@ -20,8 +20,7 @@
   background-size: 100%;
   background-opacity: 0.5;
   background-repeat: none;
-  padding-top: 20px;
-  margin-top:20px;
+  padding: 0;
 }
 
 
@@ -186,21 +185,23 @@
   display: none;
   }
 
-  #mobile {
-  display: block;
+  .navbar-header {
+  vertical-align: middle;
   }
 
-  
+  .page-content-wrapper h1, h2, h3 {
+  margin-top: none;
+  }
 
-
-  .jumbotron {
-  display: none;
+  #mobile {
+  display: block;
   }
 
   body{
   background-image:url('images/shelf.jpg');
   background-size: 100%;
-  padding-top: 0%
+  padding: 0;
+  margin-top: none;
   }
 
   .navbar-inverse {
@@ -379,7 +380,7 @@ fieldset[disabled] .btn-twitter.active {
 
 
 
-body{padding-top:30px;}
+body{padding-top:0px;}
 
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
