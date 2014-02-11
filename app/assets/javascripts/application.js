@@ -14,7 +14,5 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require twitter/bootstrap
-//= require angular
-//= require fancyInput
 //= require_tree .
 
