@@ -1,4 +1,5 @@
 <div class="row search-row">
+
   <div class="col-xs-10 col-xs-offset-1" id="title">
           <%= form_for @book do |f| %>
             <%= f.text_field :title, class: "form-control" %>
@@ -7,18 +8,4 @@
   </div>
 </div>
 
-<!-- <div class="row">
-  <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" id="title">
-    <%= form_for @book do |f| %>
-    <div class='title-wrapper'>
-     	<%= f.text_field :title, class: "form-control" %>
-    </div>
-    <%= f.submit "Submit", class: "button button-flat-caution" %> 
-    <% end %>
-   </div>
-</div>
 
-<div class='notice'>
-  <%= flash[:notice] %>
-</div>
- -->

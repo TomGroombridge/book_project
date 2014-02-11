@@ -6,20 +6,25 @@ $ ->
 
   bookView = (books, book, index) ->
     book.find('img').attr('src', books[index].image_url)
-    book.find('h2').text(books[index].title)
+    book_title = books[index].title
+    if book_title.length > 100 
+      book_title = book_title.substring(0,100) + "..."
+    book.find('h2').text(book_title)
+    
     book.find('h4').text(books[index].author)
     book_desc = books[index].content
     if book_desc.length > 150
       book_desc = book_desc.substring(0,150) + "..."
     book.find('p').text(book_desc )
+    
     book.data('book-index', index)
     bookId = book.attr("data-book-id")
     $('#book'+bookId).val books[index].id
 
 
+
   $('.new_book').on 'submit', (event) ->
     event.preventDefault()
-
 
     $.post '/books', $(this).serialize(), (books) ->
       if books.error
@@ -37,7 +42,7 @@ $ ->
 
         $(".book-title").val " "
         $emptyBook.addClass('magictime vanishIn')
-
+        
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
     books = $currentBook.data('all-books')

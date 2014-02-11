@@ -1,5 +1,31 @@
 <!-- WEB BROWSER THREE BOOKS -->
 
+<<<<<<< HEAD
+<div class="row">
+	<div class="col-lg-3 col-lg-offset-1 logo">  
+		<div class="view view-third animated flipInX">
+	      <%= image_tag @selection.books[0].image_url %>  
+	     	<div class="mask"> 
+	     		<h2><%= @selection.books[0].title %></h2>
+	     		<p><%= @selection.books[0].author %></p> 
+	     		<p><%= @selection.books[0].content.truncate(350) %></p>
+	     		<p> <%= link_to "Read More", @selection.books[0].detail_page_url, class:"info"	%> </p>
+	       	  
+	     </div>  
+	 	</div>
+	</div>
+
+	<div class="col-lg-3">  
+	<div class="view view-third animated flipInX">
+	     <%= image_tag @selection.books[1].image_url %>  
+	     <div class="mask">  
+	     	<h2><%= @selection.books[1].title %></h2>  
+	     	<p><%= @selection.books[1].author %></p>  
+	     	<p><%= @selection.books[1].content.truncate(350) %></p>
+	      <p> <%= link_to "Read More", @selection.books[1].detail_page_url, class:"info"	%> </p>
+	       </div>
+	     </div>  
+=======
 <div id="webbrowser">
 
 
@@ -109,8 +135,32 @@
   <div class="container">
     <p class="text-center"><strong>Someone will be intrested in yours..</strong></p>
     <p class="text-center"><a class="btn btn-lg btn-primary" href="index.html" role="button">Share mine</a></p>
+>>>>>>> d702e36ac806f873cad1cddbce704e2444daa635
 	</div>
 
 </div>
 
 
+<<<<<<< HEAD
+	<div class="col-lg-3">  
+	<div class="view view-third animated flipInX">
+	     <%= image_tag @selection.books[2].image_url %>  
+	     <div class="mask">  
+	     	<h2><%= @selection.books[2].title %></h2>  
+	     	<p><%= @selection.books[2].author %></p>
+	     	<p><%= @selection.books[2].content.truncate(350) %></p>  
+	      <p> <%= link_to "Read More", @selection.books[2].detail_page_url, class:"info"	%> </p> 
+	       </div>
+	     </div>  
+	</div>    
+</div>
+
+
+
+
+
+
+
+
+=======
+>>>>>>> d702e36ac806f873cad1cddbce704e2444daa635

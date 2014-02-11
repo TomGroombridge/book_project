@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 	<head>
 	  <title>FinalProject</title>
@@ -11,15 +11,17 @@
 
 	  
 	</head>
-		<body>
-                   <li> <%= link_to user_omniauth_authorize_path(:twitter) do %>  <i class="fa fa-twitter fa-2x"></i>
-                     <% end %>
-                   </li>    
+	<body>
+     
+     <li> <%= link_to user_omniauth_authorize_path(:twitter) do %>  <i class="fa fa-twitter fa-2x"></i>
+       <% end %>
+     </li>    
 
+			<%= yield %>
 
-				<%= yield %>
 					<p class="notice"><%= notice %></p>
 					<p class="alert"><%= alert %></p>
+					
 		</body>
 		
 </html>
