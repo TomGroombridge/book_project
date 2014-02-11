@@ -55,7 +55,63 @@
 
        <%= render "submit_button" %>
 
-       <%= render "three_book_layout" %> 
+      <div class="row">
+  <div class="col-md-4 book" data-book-id="1" data-filled='false'>
+    <!-- <div id="threebooks"> -->
+      <div class="view view-third">
+        <!-- <div class="panel-image"> -->
+          <%= image_tag("", class: "panel-image-preview") %> 
+        <!-- </div> -->
+          <div class="mask">
+            <div class="panel-body">
+              <h2></h2>
+              <h4></h4>
+              <p></p>
+              <br>
+              <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+       
+
+  <div class="col-md-4 book" data-book-id="2" data-filled='false'>
+      <div class="view view-third">      
+        <%= image_tag("", class: "panel-image-preview") %> 
+        <div class="mask">
+          <div class="panel-body">
+            <h2></h2>
+            <h4></h4>
+            <p></p>
+            <button class="btn-success next_book" id="choose_another">
+              Wrong Cover
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="col-md-4 book" data-book-id="3" data-filled='false'>
+    <div class="view view-third">      
+        <%= image_tag("", class: "panel-image-preview") %> 
+        <div class="mask">
+          <div class="panel-body">
+            <h2></h2>
+            <h4></h4>
+            <p>
+           
+            </p>
+            <button class="btn-success next_book" id="choose_another">
+              Wrong Cover
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 
        
 
