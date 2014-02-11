@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- allows you to call the angular by using the "ng-app"='bookspiration' -->
-<html ng-app='bookspiration'>
+<html>
 	<head>
 	  <title>FinalProject</title>
 	  
@@ -10,23 +9,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 
-	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
-	  <script src="src/facebox.js"></script>
-	  <script src="src/facebox.css"></script>
-
 	  
 	</head>
 		<body>
+                   <li> <%= link_to user_omniauth_authorize_path(:twitter) do %>  <i class="fa fa-twitter fa-2x"></i>
+                     <% end %>
+                   </li>    
 
-	<!-- 		<ul class="hmenu">
-			  <%= render 'devise/menu/registration_items' %>
-			  <%= render 'devise/menu/login_items' %>
-			</ul> -->
 
 				<%= yield %>
 					<p class="notice"><%= notice %></p>
 					<p class="alert"><%= alert %></p>
-
 		</body>
+		
 </html>
 

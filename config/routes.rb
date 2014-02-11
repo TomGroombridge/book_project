@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
-
+  get 'users/:username' => 'selections#showuser'
+  
 root :to => "selections#new"
 
   resources :suggestions
   resources :selections
   resources :show
   resources :books 
+  
   #  do 
   # end
 

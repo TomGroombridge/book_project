@@ -48,8 +48,6 @@ gem 'factory_girl_rails'
 
 gem 'omniauth-twitter'
 
-gem 'angularjs-rails'
-
 gem 'devise'
 
 gem 'twitter-bootstrap-rails', github:'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
