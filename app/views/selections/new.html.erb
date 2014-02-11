@@ -1,15 +1,50 @@
+<html>
+  <head>
+    <title>Books</title>
+    <!-- Obtain Bootstrap style sheet from CDN (online service) so it doesn't have to be on my machine -->
+    <!-- Check http://www.bootstrapcdn.com/ for latest version. -->
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="main.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/buttons.css">
+
+
+      <meta name="viewport" content="initial-scale=1 maximum-scale=1">
+
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <meta name="description" content="3D Thumbnail Hover Effects" />
+      <meta name="keywords" content="3d, 3dtransform, hover, effect, thumbnail, overlay, curved, folded" />
+      <meta name="author" content="Codrops" />
+      <link rel="shortcut icon" href="../favicon.ico"> 
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/style_common.css" />
+      <link rel="stylesheet" type="text/css" href="css/style1.css" />
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
+      <script type="text/javascript" src="js/modernizr.custom.69142.js"></script> 
+
+      <link rel="stylesheet" href="animate.min.css">
+ 
+  </head>
+  <body>
 <div class="container">
-  <!-- Body of web page goes inside container tags -->
+  <div id="webbrowser">
+    <div class="col-xs-12 col-md-12">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
+          <h1>
+            #dogearedpages
+          </h1>
+        </div>
 
-<div id="webbrowser">
-  <div class="col-xs-12 col-md-12">
-    <div class="row">
-      <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
-        <h1>
-          #dogeared
-        </h1>
-      </div>
-
+        <div class="col-xs-12 col-md-3 col-md-offset-3" id="top">
+          <p>Books can change you life</p>
+        </div>
+       </div>
+        
 
       <div class="col-xs-12 col-md-4 col-md-offset-3" id="top">
         <p class="quotes">Outside of a dog, a book is a man’s best friend. Inside of a dog, it’s too dark to read. <br>Groucho Marx<br></p>
@@ -33,18 +68,22 @@
             <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book1' %>
             <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book2' %>
             <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book3' %>
-
             <%= f.button do %>
               <i class="fa fa-twitter fa-5x"></i>
             <% end %>
           <% end %>
           </li>   
       </div>
+
     </div>
 
     <%= render :partial => 'layouts/footer' %>
-</div> 
  
+
+    </div>    
+  </div>
+</div> 
+
 <!-- /container -->
 
 
@@ -206,9 +245,9 @@
 
                     <div class="col-s-4">
                     <%= form_for @selection do |f| %>
-                      <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book1' %>
-                      <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book2' %>
-                      <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book3' %>
+                      <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book1' %>
+                      <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book2' %>
+                      <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book3' %>
 
                       <%= f.button do %>
                         <i class="fa fa-twitter fa-5x"></i>

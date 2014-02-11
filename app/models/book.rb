@@ -2,6 +2,7 @@ class Book < ActiveRecord::Base
   has_and_belongs_to_many :selections
   # before_create :get_stuff
 
+  
 
   def self.find_top_matches(title)
     books = AmazonBookFetcher.new.search(title)
