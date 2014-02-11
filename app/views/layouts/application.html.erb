@@ -6,9 +6,8 @@
 	  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	  <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-	  <script src="src/facebox.js"></script>
-	  <script src="src/facebox.css"></script>
 
 	  
 	</head>
@@ -16,6 +15,8 @@
                    <li> <%= link_to user_omniauth_authorize_path(:twitter) do %>  <i class="fa fa-twitter fa-2x"></i>
                      <% end %>
                    </li>    
+
+
 				<%= yield %>
 					<p class="notice"><%= notice %></p>
 					<p class="alert"><%= alert %></p>

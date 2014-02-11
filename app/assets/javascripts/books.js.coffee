@@ -22,16 +22,9 @@ $ ->
     $('#book'+bookId).val books[index].id
 
 
-# this bit of code is for using a special text editor on the search bar
-# $("#book_title").fancyInput();
 
+  $('.new_book').on 'submit', (event) ->
 
-
-
-
-
-# this code is what happens when you hit submit after entering a title
-  $('#new_book').on 'submit', (event) ->
     event.preventDefault()
 
 
@@ -39,16 +32,18 @@ $ ->
       if books.error
         alert("No book found with that title")
       else
-        $emptyBook = $('.book[data-filled="false"]:first')
+        $emptyBook = $('.book[data-filled="false"]:visible:first')
 
         bookView(books, $emptyBook, 0)
-        bookId = $emptyBook.attr("data-book-id")
+        bookId = $emptyBook.attr("data-book-id") 
         $('#book'+bookId).val books[0].id
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
-        $emptyBook.addClass('magictime vanishIn'); #this is for using the cool css tricks
-        $("#book_title").val " "
+        $("#sidebar-wrapper").toggleClass("active")
+
+        $(".book-title").val " "
+        $emptyBook.addClass('magictime vanishIn'); //this is for using the cool css tricks
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
@@ -59,3 +54,6 @@ $ ->
       newIndex = 0
 
     bookView(books, $currentBook, newIndex) 
+
+
+
