@@ -1,36 +1,8 @@
-
-<html>
-<head>
-	<title></title>
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lobster|Old+Standard+TT' rel='stylesheet' type='text/css'>
-
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="3D Thumbnail Hover Effects" />
-    <meta name="keywords" content="3d, 3dtransform, hover, effect, thumbnail, overlay, curved, folded" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="../favicon.ico"> 
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/style_common.css" />
-    <link rel="stylesheet" type="text/css" href="css/style1.css" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
-    <script type="text/javascript" src="js/modernizr.custom.69142.js"></script> 
-
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
- 
-</head>
-<body>
-    
 <center>
 <div class="col-sm-4 col-xs-12 col-md-3 col-lg-6 col-lg-offset-2 user-profile">
-    <% if user_signed_in? %>
-    <%= image_tag(current_user.avatar_url) if current_user.avatar_url %>
-    <%= current_user.name + "'s favourite books" %>
+    <% if @user %>
+        <%= image_tag(@user.avatar_url) if @user.avatar_url %>
+        <%= @user.name + "'s favourite books" %>
     <% end %>
 
     <a href="https://twitter.com/share" class="twitter-share-button" data-text=" I picked the books the changed my life. What are yours? #lifelibrary" data-lang="en" data-size="large" data-count="none">Tweet my LifeLibrary</a>
@@ -40,6 +12,9 @@
 
 
 
+<div id="webbrowser">
+<%= render "create_books_button" %>
+</div>
 
 
 <%= render "create_books_button" %>
@@ -47,7 +22,3 @@
 <%= render "hover_effect_books" %>
 
 <%= render 'top10_books.html.erb' %>
-
-
-</body>
-</html>
