@@ -1,12 +1,10 @@
 <div class="row">
-  <div class="col-md-4 book" data-book-id="1" data-filled='false'>
-    <!-- <div id="threebooks"> -->
-      <div class="view view-third">
-        <!-- <div class="panel-image"> -->
+  <div class="col-md-4 book " data-book-id="1" data-filled='false'>
+      <h1>1</h1>
+        <div class="view view-third" style=" background: #ffffff;">
           <%= image_tag("", class: "panel-image-preview") %> 
-        <!-- </div> -->
           <div class="mask">
-            <a class= 'close' href='#'>✖</a>
+            <button class= 'close' href='#'>✖</button>
             <div class="panel-body">
               <h2></h2>
               <h4></h4>
@@ -23,6 +21,7 @@
        
 
     <div class="col-md-4 book" data-book-id="2" data-filled='false'>
+      <h1>2</h1>
       <div class="view view-third">      
         <%= image_tag("", class: "panel-image-preview") %> 
         <div class="mask">
@@ -44,10 +43,11 @@
 
 
   <div class="col-md-4 book" data-book-id="3" data-filled='false'>
+      <h1>3</h1>
     <div class="view view-third">      
         <%= image_tag("", class: "panel-image-preview") %> 
         <div class="mask">
-        <a class= 'close' href='#'>✖</a>
+        <a class= 'close' id="closebook" href='#'>✖</a>
           <div class="panel-body">
             <h2></h2>
             <h4></h4>

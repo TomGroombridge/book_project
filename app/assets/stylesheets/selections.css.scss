@@ -2,26 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
+.book {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   }
 
 .view {
     width: relative;
     height: relative;
     margin: 10px;
     border-radius: 5px;
-    border-width: 5px;
-    border-color: black;
+    border-width: 20px;
+    border-style:solid;
+    border-color: white;
+    background-color: white;
     float: left;
     overflow: hidden;
     position: relative;
     text-align: center;
-    -webkit-box-shadow: 0 0 40px 16px #fff;
-    -moz-box-shadow: 0 0 40px 16px #fff;
-    box-shadow: 0 0 40px 16px #fff;
     cursor: default;
+    -webkit-transform: scale(0.7);
     
 }
+
 
 .view .mask, .view .content {
     width: 100%;
@@ -29,7 +34,8 @@
     position: absolute;
     overflow: hidden;
     top: 0;
-    left: 0
+    left: 0;
+    
 }
 
 .view .content p {
@@ -81,6 +87,7 @@
 
 .view-third img {   
     transition: all 0.8s ease-in; 
+
 }
 .view-third .mask { 
     background-color: rgba(0,0,0,0.6);

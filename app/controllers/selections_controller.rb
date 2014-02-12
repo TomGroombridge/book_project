@@ -1,5 +1,4 @@
 class SelectionsController < ApplicationController
-
   def new
     @selection = Selection.new
     @book = Book.new

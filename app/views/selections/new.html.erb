@@ -34,8 +34,8 @@
  
 
   <div class="container">
-    <!-- Body of web page goes inside container tags -->
 
+    <!-- Body of web page goes inside container tags -->
   <div id="webbrowser">
     <div class="col-xs-12 col-md-12">
       <div class="row">
@@ -85,7 +85,7 @@
       
 
     </div> 
-<!-- /container -->
+
 
 
           <!-- MOBILE SITE **** MOBILE SITE **** MOBILE SITE **** -->
@@ -93,7 +93,7 @@
 
     <div id="mobile">
 
-        <!-- Sidebar -->
+     
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 Your three Books
@@ -183,6 +183,7 @@
                       <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book1' %>
                       <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book2' %>
                       <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book3' %>
+                      <%end %>
 
                       <%= f.button do %>
                         <i class="fa fa-twitter fa-5x"></i>
@@ -226,6 +227,4 @@
   </body>
 </html>
 
-
-<!--this is the code for the autocomplete-->
 
