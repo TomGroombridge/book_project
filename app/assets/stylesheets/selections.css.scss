@@ -10,8 +10,8 @@
    }
 
 .view {
-    width: relative;
-    height: relative;
+    width: 100%;
+    display: inline-block;
     margin: 10px;
     border-radius: 5px;
     border-width: 20px;
@@ -22,9 +22,8 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-    cursor: default;
-    -webkit-transform: scale(0.7);
-    
+    font-family: 'Special Elite', cursive;
+    cursor: default; 
 }
 
 .view .mask, .view .content {
@@ -37,17 +36,34 @@
     
 }
 
+.panel-body {
+    height: 100%;
+}
+
 .view .content p {
     max-height: 320px;
     overflow: scroll;
 }
 
-.view img {
-    display: block;
+.view .panel-image-preview {
+    display: inline-block;
     position: relative;
+    /*max-width: 100%;*/
+    max-height: 370px;
     max-width: 100%;
-    max-height: 100%;
 }
+
+.image-box {
+    display: none;
+    background-color: #fff;
+    padding: 25px;
+    border: 2px solid #0C063C;
+}
+
+.spinner {
+    display: none;
+}
+
 .view .view-third {
   font-family: 'Special Elite', cursive;
   color: #0C063C;
@@ -89,7 +105,7 @@
     box-shadow: 0 0 5px #000
 }
 
-.view-third img {   
+.view-third .panel-image-preview {   
     transition: all 0.8s ease-in; 
 
 }

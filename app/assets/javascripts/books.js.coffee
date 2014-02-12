@@ -5,7 +5,10 @@
 $ ->
 
   bookView = (books, book, index) ->
-    book.find('img').attr('src', books[index].image_url)
+    book.find('.spinner').hide()
+    book.find('.image-box').css('display', 'inline-block')
+
+    book.find('.panel-image-preview').attr('src', books[index].image_url)
     book_title = books[index].title
     if book_title.length > 100 
       book_title = book_title.substring(0,100) + "..."
@@ -26,7 +29,7 @@ $ ->
     event.preventDefault()
     $book = $(this).closest('.book')
 
-    $book.find('img').attr('src', '')
+    $book.find('.panel-image-preview').attr('src', '')
     $book.attr('data-filled', false)
 
   $('.new_book').on 'submit', (event) ->
@@ -36,13 +39,15 @@ $ ->
     data =  $(this).serialize()
 
     $("#book_title").val ''
+    $emptyBook = $('.book[data-filled="false"]:visible:first')
+    $emptyBook.find('h3').slideUp()
+
+    $emptyBook.find('.spinner').show()
 
     $.post '/books', data, (books) ->
       if books.error
         alert("No book found with that title")
       else
-        $emptyBook = $('.book[data-filled="false"]:visible:first')
-
 
         bookView(books, $emptyBook, 0)
         bookId = $emptyBook.attr("data-book-id") 
@@ -58,10 +63,20 @@ $ ->
         $("#book_title").attr("placeholder", 'and another...')
 
         if $emptyBook.data('book-id') == 3
-          $('#book_title').width(300)
+          $('#book_title').blur();
+          // # $('#book_title').attr('disabled', true);
+          $('#book_title').width(388)
+          $('#book_title').val 'SHARE MY BOOKS'
+          $('#book_title').addClass("cat")
+          $('#book_title').css( 'cursor', 'pointer' );
+          $('.cat').on 'click', ->
+            $('#buttons button').click()
+
+
 
  
         $(".book-title").val " "
+        $(".book-title").autocomplete "close"
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')
