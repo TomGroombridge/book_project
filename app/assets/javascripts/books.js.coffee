@@ -13,8 +13,8 @@ $ ->
     
     book.find('h4').text(books[index].author)
     book_desc = books[index].content
-    if book_desc.length > 150
-      book_desc = book_desc.substring(0,150) + "..."
+    if book_desc.length > 250
+      book_desc = book_desc.substring(0,250) + "..."
     book.find('p').html(book_desc )
     
     book.data('book-index', index)
@@ -58,7 +58,13 @@ $ ->
         $("#book_title").attr("placeholder", 'and another...')
 
         if $emptyBook.data('book-id') == 3
-          $('#book_title').width(300)
+          $('#book_title').width(388)
+          $('#book_title').val 'SHARE MY BOOKS'
+          $('#book_title').addClass("cat")
+          $('#book_title').css( 'cursor', 'pointer' );
+          $('.cat').on 'click', ->
+            $('#buttons button').click()
+
 
  
         $(".book-title").val " "
@@ -72,6 +78,10 @@ $ ->
       newIndex = 0
 
     bookView(books, $currentBook, newIndex) 
+
+
+
+
 
 
 
