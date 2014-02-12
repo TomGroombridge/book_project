@@ -58,7 +58,11 @@ $ ->
         $("#book_title").attr("placeholder", 'and another...')
 
         if $emptyBook.data('book-id') == 3
-          $('#book_title').width(300)
+          $('#book_title').width(100)
+          $('#book_title').val 'SUBMIT'
+          $('#book_title').background-color(blue)
+          $("#tweeting").toggleClass("tweetnow")
+
 
  
         $(".book-title").val " "
