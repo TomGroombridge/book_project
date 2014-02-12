@@ -3,7 +3,7 @@ require 'hmac-sha2'
 
 class AmazonBookFetcher
 
-  ACCESS_IDENTIFIER = 'AKIAJDSSWRQYZB7YML4Q'
+  ACCESS_IDENTIFIER = 'AKIAJIT2TOCWJOPENM7Q'
   SECRET_IDENTIFIER = Rails.application.secrets.s3_secret
 
   AMAZON_ENDPOINT = 'http://webservices.amazon.co.uk/onca/xml'
@@ -23,7 +23,7 @@ class AmazonBookFetcher
       
     {
       'Service' => 'AWSECommerceService',
-      'AWSAccessKeyId' => 'AKIAJDSSWRQYZB7YML4Q',
+      'AWSAccessKeyId' => 'AKIAJIT2TOCWJOPENM7Q',
       'AssociateTag' => 'www.chrishillio-20',
       'Operation'=> 'ItemSearch',
       'SearchIndex' => 'Books',
@@ -60,7 +60,7 @@ class AmazonBookFetcher
 
   def parse_response(response)
     parsed = Nori.new.parse(response.body)
-    books = parsed["ItemSearchResponse"]["Items"]["Item"]
+    books = parsed["ItemSearchResponse"]["Items"]["Item"].first(3)
     return false unless books
     
     books.map do |book|
@@ -80,9 +80,24 @@ class AmazonBookFetcher
       book_details['asin'] = book["ASIN"]
       book_details['image_url'] = book["LargeImage"]["URL"]
       book_details['author'] = [*book["ItemAttributes"]["Author"]].join(" and ")
-      book_details['content'] = book["EditorialReviews"]["EditorialReview"]["Content"] rescue "No description"
+      book_details['content'] = content_for(book)
       book_details
 
     end
   end 
+
+  def content_for(book)
+    content = ''
+    begin 
+      content = book["EditorialReviews"]["EditorialReview"]["Content"]
+    rescue
+      begin
+        content = book["EditorialReviews"]["EditorialReview"].map{|review| review['Content']}.join(', ')    
+      rescue Exception => e
+        content = "No Description"
+      end
+    end
+
+    content.gsub(/<I>|<\/I>|<p>|<\/p>/, '')
+  end
 end

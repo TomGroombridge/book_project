@@ -15,17 +15,17 @@
   /*background-image:url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52dbe5607f0db_1.JPG');*/
   
   /*background-image: url("http://4.bp.blogspot.com/-rEXpk6NLPhU/UQ32u8KL3JI/AAAAAAAAAuo/hBVZMp6io1c/s1600/Bookcase%2B-%2BRoald%2BDahl.jpg");*/
-  background-image: asset-url("bookground2.png");
+  background-image: asset-url("tokraken_0.jpg");
   background-position: fixed;
   background-size: 100%;
   background-opacity: 0.5;
   background-repeat: none;
-  padding-top: 20px;
-  margin-top:20px;
+  padding: 0;
 }
 
-
-
+#buttons {
+  display: none;
+}
 
 #gallery img {
     border: 4px solid #fff;
@@ -33,8 +33,6 @@
     -webkit-box-shadow: 3px 3px 5px #999;
     float: left;
 }
-
-
 
 
 #mobile {
@@ -58,9 +56,6 @@
   margin-top: 4%;
 }
 
-#input {
-  margin: 10%;
-}
 
 #threebooks {
   display: none;
@@ -72,7 +67,7 @@
 }
 
 .search-row {
-  background: rgba(0,0,0,0.8);
+margin-top: 5%
 }
 
 .row {
@@ -80,14 +75,22 @@
   margin-bottom: 10px;
 }
 
+.col-md-4 h3 {
+  font-size: 120px;
+  font-family: 'Special Elite', cursive;
+  color: #0C063C;
+  text-align: center;
+  font-weight: bold;  
+}
 
 .col-md-4 h1 {
   font-size: 100px;
   font-family: 'Special Elite', cursive;
-  color: black;
+  color: #0C063C;
   text-align: center;
   font-weight: bold;
 }
+
 
 .col-md-4 h2 {
   font-size: 18px;
@@ -97,9 +100,13 @@
   text-align: center;
 }
 
-.col-md-3 p {
-  font-size: 15px;
-  color: #6e4237;
+.col-md-4 .book{
+  text-align: center;
+}
+
+.col-md-4 p {
+  font-size: 20px;
+  color: #0C063C;
   text-align: center;
   font-family: 'Special Elite', cursive;
 }
@@ -132,27 +139,40 @@
 }
 
 #footer {
-  background-color: #060A30;
+  background-color: white;
   border-top: none;
   font-size: 18px;
+  color: #0C063C;
   font-family: 'Special Elite', cursive;
+  padding-top: 3px;
+  border: 2px solid #0C063C;
+  text-align: center;
+  height: 15px;
 }
 
+/*.book-box {
+  width: 350px;
+  height: 600px;
+  background-color: pink;
+}
+
+.book-cover {
+  width: 150px;
+  height: 230px;
+  background-color: white;
+}*/
 
 /*.ui-autocomplete { */
-.ui-menu .ui-menu-item a{
- background-color: red;  
+.ui-menu .ui-menu-item a{  
  text-align: left;
  cursor: pointer;
  display: block; 
- width: 20%; 
- letter-spacing: 4px;        
- text-shadow: 0 0 2px black;       
+ /*width: 20%; */
+ letter-spacing: 4px;      
+ /*text-shadow: 0 0 2px black; */      
  word-spacing: 20px;               
   font-family: 'Special Elite'
 }
-
-
 
 
 /*#book_title {*/
@@ -160,15 +180,17 @@
   -webkit-appearance: none;
  display: inline-block;
  align: center;
- width: 1000px;
+ /*width: 1000px;*/
  background-color: white;
- border: 1px solid rgb(185,185,185);
- border-top-color: rgb(160,160,160);
+ border: 2px solid #0C063C;
  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
  cursor: text;
  font-family: 'Special Elite', cursive;
- height: 75px;
  position: relative;
+}
+
+.input button, .button.button {
+  display: none;
 }
 
 /* Mobiles and small tablets*/
@@ -176,32 +198,84 @@
 /* need to give body or html a size to float buttons relative? */
 
 
-@media only screen and (min-width: 0px) and (max-width: 480px) {
+@media only screen and (min-width: 0px) and (max-width: 400px) {
 
   html {
   size: 100%;
+  }
+
+  body{
+  background-image: asset-url("mobilebackground.jpg");
+  background-size: 100%;
+  padding: 0;
+  margin-top: none;
+  max-width: 320px;
   }
 
   #webbrowser {
   display: none;
   }
 
+  .navbar-header {
+  vertical-align: middle;
+  }
+
+  p.bubble {
+    background-color: #FFFFFF;
+    border: 3px solid #666666;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px #888888;
+    height: 100px;
+    line-height: 100px;
+    margin: 30px auto;
+    position: relative;
+    text-align: center;
+    width: 200px;
+  }
+
+  p.bubble:before, p.bubble:after {
+    content: " ";
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
+
+  p.thought:before, p.thought:after {
+    background-color: #FFFFFF;
+    border: 3px solid #666666;
+    border-radius: 28px;
+    height: 40px;
+    left: 10px;
+    top: 70px;
+    width: 40px;
+  }
+
+  p.thought:after {
+    border-radius: 18px;
+    height: 20px;
+    left: 5px;
+    top: 100px;
+    width: 20px;
+  }
+
+  #title input {
+    width: 95%;
+    height: 50px;
+  }
+
+  .btn-default {
+    height: 50px;
+    
+  }
+
+  .page-content-wrapper h1, h2, h3 {
+  margin-top: none;
+  }
+
   #mobile {
   display: block;
   }
 
-  
-
-
-  .jumbotron {
-  display: none;
-  }
-
-  body{
-  background-image:url('images/shelf.jpg');
-  background-size: 100%;
-  padding-top: 0%
-  }
 
   .navbar-inverse {
   background: none;
@@ -232,7 +306,7 @@
 }
 
 .btn-huge {
-  font-family: 'Lobster', cursive;
+    font-family: 'Special Elite', cursive;
     padding: 18px 28px;
     font-size: 200%; //change this to your desired size
     line-height: normal;
@@ -349,14 +423,6 @@ fieldset[disabled] .btn-twitter.active {
 
 
 
-
-
-
-
-
-
-
-
 .box > .icon { text-align: center; position: relative; }
 .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #63B76C; vertical-align: middle; }
 .box > .icon:hover > .image { background: #333; }
@@ -371,15 +437,7 @@ fieldset[disabled] .btn-twitter.active {
 .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
 .box .space { height: 30px; }
 
-
-
-
-
-
-
-
-
-body{padding-top:30px;}
+body{padding-top:0px;}
 
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
@@ -389,41 +447,133 @@ line-height: 1.428571429;
 color: #999;
 }
 
-.col-lg-6 h4 {
-  font-family: 'Special Elite', cursive;
-}
+/*.twitter-timeline {
+  border-radius: 5px;
+  color: #0C063C;
+}*/
 
-.col-lg-6 p {
-  font-family: 'Lobster', cursive;
-}
-
-.col-lg-6 h3 {
-  font-family: 'Lobster', cursive;
-}
-
-.top-books {
-  height: 450px;
-  overflow: scroll;
-}
-
+/*  Top 100 books start   */
 .top100books h3 {
   font-family: 'Special Elite', cursive;
 }
+.top100books {
+  background-image: none
+}
 
-/*.thumbnail {
-  width: 400px;
+.thumbnail {
+  width: 80px;
   height: auto;
+  float: center;
+  margin: 5px;
+}
 
+/*  Top 100 books end  */
+
+
+
+
+/*.twitter-share-button {
+  float: center;
+  padding: 0px;
 }*/
 
-.col-lg-offset-2 {
-   border: 10px double;
-   padding: 10px;
-   background-color: black;
-   background-position: center left;
+/*#tweeting {
+  display: none;
+}*/
+
+/*#tweeting.tweetnow {
+  display: block;
+}*/
+
+.new_book {
+  text-align: center
+}
+
+#book_title {
+  transition: 1s width ease;
+  height: 75px;
+  font-size: 45px;
+  color: #0C063C;
+  border: 2px solid #0C063C;
+  margin: auto;
+  margin-bottom: 76px;
+}
+
+.book-choices {
+  margin-top: 50px;
+}
+
+/*  Top-bar start  */
+
+.tweetbar {
+/*   border: 10px double;*/
+   /*height: 10%;*/
+   /*padding: 10px;*/
+   background-color: white;
+   border-radius: 5px;
    /* The background will be inside the padding */ 
    background-origin: content-box;
+   position: -webkit-sticky;  
+   top: 0;  
+   z-index: 1;
+   font-family: 'Special Elite', cursive;
+   color: #0C063C;
+   border-radius: 5px;
+   border: 2px solid #0C063C;
+
+}
+
+.twitter-img {
+  width: auto;
+  height: auto;
+  border-radius: 3px;
+}
+
+/*  Top-bar end  */
+
+
+
+.books-tweets {
+  font-family: 'Special Elite', cursive;
+}
+.books-tweets iframe {
+  width: 100%;
+
+}
+
+.books-tweets h3 {
+  font-family: 'Special Elite', cursive;
+  color: #0C063C;
+}
+
+.top-books p {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+}
+
+.top-books h4 {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
 }
 
 
+/*.top10 h3 {
+  font-family: 'Lobster', cursive;
+}*/
+.top-books li{
+  list-style-type: none;
+ /* border-bottom: 1px solid #0C063C;*/
 
+}
+.top-books {
+  height: 500px;
+  overflow: scroll;
+  font-family: 'Special Elite', cursive;
+/*  background-image: url("http://t2.gstatic.com/images?q=tbn:ANd9GcSTJnNtjggshI8LrgGkL8pDViv0z2FPDVb4zgldh648be27Eq3L");
+  background-repeat: no-repeat;
+  background-size: 100%;*/
+  background-color: white;
+  border-radius: 5px;
+  color: #0C063C;
+  border: 1px solid #0C063C;
+}

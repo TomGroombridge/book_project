@@ -1,4 +1,9 @@
 Rails.application.configure do
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
+  config.twitter_key = ENV['TWITTER_KEY']
+  config.twitter_secret = ENV['TWITTER_SECRET']
+  config.s3_secret = ENV['S3_SECRET']
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
