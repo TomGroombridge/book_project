@@ -399,30 +399,7 @@ color: #999;
 
 /*  Top 100 books end  */
 
-/*  Top-bar start  */
 
-.navbar-tweet {
-/*   border: 10px double;*/
-   /*height: 10%;*/
-   /*padding: 10px;*/
-   background-color: white;
-   border-radius: 5px;
-   /* The background will be inside the padding */ 
-   background-origin: content-box;
-   font-family: 'Lobster', cursive;
-   position: -webkit-sticky;  
-   top: 0;  
-   z-index: 1;
-   font-family: 'Special Elite', cursive;
-   color: #0C063C;
-}
-
-.twitter-img {
-  width: auto;
-  height: auto;
-}
-
-/*  Top-bar end  */
 
 
 /*.twitter-share-button {
@@ -452,37 +429,80 @@ color: #999;
   margin-bottom: 76px;
 }
 
-.top10 {
-  font-family: 'Special Elite', cursive;
-}
-.top10 iframe {
-  width: 100%;
-
-}
-
 .book-choices {
   margin-top: 50px;
 }
 
-.top10 h3 {
+/*  Top-bar start  */
+
+.navbar-tweet {
+/*   border: 10px double;*/
+   /*height: 10%;*/
+   /*padding: 10px;*/
+   background-color: white;
+   border-radius: 5px;
+   /* The background will be inside the padding */ 
+   background-origin: content-box;
+   position: -webkit-sticky;  
+   top: 0;  
+   z-index: 1;
+   font-family: 'Special Elite', cursive;
+   color: #0C063C;
+   border-radius: 5px;
+   border: 2px solid #0C063C;
+
+}
+
+.twitter-img {
+  width: auto;
+  height: auto;
+  border-radius: 3px;
+}
+
+/*  Top-bar end  */
+
+
+
+.books-tweets {
+  font-family: 'Special Elite', cursive;
+}
+.books-tweets iframe {
+  width: 100%;
+
+}
+
+.books-tweets h3 {
   font-family: 'Special Elite', cursive;
   color: #0C063C;
 }
 
-/*.top10 p {
-  font-family: 'Lobster', cursive;
-}*/
+.top-books p {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+}
+
+.top-books h4 {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+}
+
 
 /*.top10 h3 {
   font-family: 'Lobster', cursive;
 }*/
-
+.top-books li{
+  list-style-type: none;
+  border-bottom: 1px solid #0C063C;
+}
 .top-books {
   height: 500px;
   overflow: scroll;
+  font-family: 'Special Elite', cursive;
+/*  background-image: url("http://t2.gstatic.com/images?q=tbn:ANd9GcSTJnNtjggshI8LrgGkL8pDViv0z2FPDVb4zgldh648be27Eq3L");
+  background-repeat: no-repeat;
+  background-size: 100%;*/
   background-color: white;
   border-radius: 5px;
   color: #0C063C;
-  border: 2px solid #0C063C;
-  font-family: 'Special Elite', cursive;
+  border: 1px solid #0C063C;
 }

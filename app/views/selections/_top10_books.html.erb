@@ -1,14 +1,17 @@
-<div class='list-group top10'>
+<div class='list-group books-tweets'>
         <div class='col-sm-6'>
                      <center><h3>Top 10 books</h3></center>
                         <div class="top-books"> 
+                          <ul>
                   <% @top_books.each_with_index do |book, index| %>
+                        <li>
                           <h4><%=index+1%>. <%= book.title.truncate(40) %></h4>
                           <p>by <%= book.author %></p>
                           <div class="rank-count">
                             <p>Selected: <%= book.selections.count%></p>
                           </div>
-                  <% end %>
+                        </li>
+                  <% end %></ul>
               </div>
 
         </div>
