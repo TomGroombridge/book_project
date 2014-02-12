@@ -43,7 +43,7 @@
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
           <h1>
-            #dogeared
+            #dogears
           </h1>
         </div>
 
@@ -58,8 +58,7 @@
       
      
      <%= render "submit_button" %>
-     <%= render "three_book_layout" %>
-    </div>
+
 
     <div class="row" id="buttons">
     
@@ -69,13 +68,14 @@
             <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book1' %>
             <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book2' %>
             <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book3' %>
-            <%= f.button do %>
-              <i class="fa fa-twitter fa-5x"></i>
-            <% end %>
+            <%= f.button %>
             <% end %>
             </li>   
         </div>
       </div>
+     <%= render "three_book_layout" %>
+    </div>
+
 
       <%= render :partial => 'layouts/footer' %>
     </div> 
