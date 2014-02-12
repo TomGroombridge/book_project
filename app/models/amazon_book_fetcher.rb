@@ -3,7 +3,7 @@ require 'hmac-sha2'
 
 class AmazonBookFetcher
 
-  ACCESS_IDENTIFIER = 'AKIAJDSSWRQYZB7YML4Q'
+  ACCESS_IDENTIFIER = 'AKIAJIT2TOCWJOPENM7Q'
   SECRET_IDENTIFIER = Rails.application.secrets.s3_secret
 
   AMAZON_ENDPOINT = 'http://webservices.amazon.co.uk/onca/xml'
@@ -23,7 +23,7 @@ class AmazonBookFetcher
       
     {
       'Service' => 'AWSECommerceService',
-      'AWSAccessKeyId' => 'AKIAJDSSWRQYZB7YML4Q',
+      'AWSAccessKeyId' => 'AKIAJIT2TOCWJOPENM7Q',
       'AssociateTag' => 'www.chrishillio-20',
       'Operation'=> 'ItemSearch',
       'SearchIndex' => 'Books',

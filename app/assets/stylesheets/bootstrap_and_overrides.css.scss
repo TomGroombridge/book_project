@@ -377,25 +377,12 @@ line-height: 1.428571429;
 color: #999;
 }
 
-.col-lg-6 h4 {
-  font-family: 'Special Elite', cursive;
-}
-
-.col-lg-6 p {
-  font-family: 'Lobster', cursive;
-}
-
-.col-lg-6 h3 {
-  font-family: 'Lobster', cursive;
-}
-
-.top-books {
-  height: 500px;
-  overflow: scroll;
-  background-color: white;
+/*.twitter-timeline {
   border-radius: 5px;
-}
+  color: #0C063C;
+}*/
 
+/*  Top 100 books start   */
 .top100books h3 {
   font-family: 'Special Elite', cursive;
 }
@@ -410,6 +397,9 @@ color: #999;
   margin: 5px;
 }
 
+/*  Top 100 books end  */
+
+/*  Top-bar start  */
 
 .navbar-tweet {
 /*   border: 10px double;*/
@@ -423,6 +413,8 @@ color: #999;
    position: -webkit-sticky;  
    top: 0;  
    z-index: 1;
+   font-family: 'Special Elite', cursive;
+   color: #0C063C;
 }
 
 .twitter-img {
@@ -430,10 +422,13 @@ color: #999;
   height: auto;
 }
 
-.twitter-share-button {
+/*  Top-bar end  */
+
+
+/*.twitter-share-button {
   float: center;
   padding: 0px;
-}
+}*/
 
 /*#tweeting {
   display: none;
@@ -457,10 +452,37 @@ color: #999;
   margin-bottom: 76px;
 }
 
+.top10 {
+  font-family: 'Special Elite', cursive;
+}
 .top10 iframe {
   width: 100%;
+
 }
 
 .book-choices {
   margin-top: 50px;
+}
+
+.top10 h3 {
+  font-family: 'Special Elite', cursive;
+  color: #0C063C;
+}
+
+/*.top10 p {
+  font-family: 'Lobster', cursive;
+}*/
+
+/*.top10 h3 {
+  font-family: 'Lobster', cursive;
+}*/
+
+.top-books {
+  height: 500px;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 5px;
+  color: #0C063C;
+  border: 2px solid #0C063C;
+  font-family: 'Special Elite', cursive;
 }
