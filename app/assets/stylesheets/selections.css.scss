@@ -16,11 +16,22 @@
     overflow: hidden;
     position: relative;
     text-align: center;
+    font-family: 'Special Elite', cursive;
     -webkit-box-shadow: 0 0 40px 16px #fff;
     -moz-box-shadow: 0 0 40px 16px #fff;
     box-shadow: 0 0 40px 16px #fff;
-    cursor: default;  
+    cursor: default; 
+    -webkit-transform: scale(0.7); 
 }
+
+.book {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*  */
 
 .view .mask, .view .content {
     width: 100%;
@@ -42,6 +53,12 @@
     max-width: 100%;
     max-height: 100%;
 }
+.view .view-third {
+  font-family: 'Special Elite', cursive;
+  color: #0C063C;
+  text-align: center;
+  font-weight: bold; 
+}
 
 .view h2 {
     text-transform: uppercase;
@@ -55,9 +72,8 @@
 }
 
 .view p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 12px;
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
     position: relative;
     color: #fff;
     padding: 10px 20px 20px;

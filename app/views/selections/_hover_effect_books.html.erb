@@ -2,38 +2,39 @@
 
 <div id="webbrowser">
 	<div class="row">
+
 		<div class="col-lg-4">  
-			<div class="view view-third animated flipInX">
+			<div class="view view-third">
 		      <%= image_tag @selection.books[0].image_url %>  
 		     	<div class="mask"> 
 		     		<h2><%= @selection.books[0].title %></h2>
 		     		<p><%= @selection.books[0].author %></p> 
-		     		<p><%= @selection.books[0].content.truncate(350) %></p>
+		     		<p><%= @selection.books[0].content.truncate(250) %></p>
 		     		<p> <%= link_to "Read More", @selection.books[0].detail_page_url, class:"info"	%> </p>
 		       	  
 		     </div>  
 		 	</div>
 		</div>
-
 		<div class="col-lg-4">  
-			<div class="view view-third animated flipInX">
+			<div class="view view-third">
+
 		     <%= image_tag @selection.books[1].image_url %>  
 		     <div class="mask">  
 		     	<h2><%= @selection.books[1].title %></h2>  
 		     	<p><%= @selection.books[1].author %></p>  
-		     	<p><%= @selection.books[1].content.truncate(350) %></p>
+		     	<p><%= @selection.books[1].content.truncate(250) %></p>
 		      <p> <%= link_to "Read More", @selection.books[1].detail_page_url, class:"info"	%> </p>
 		      </div>
 		    </div> 
 		 </div>
-
 		<div class="col-lg-4">  
-		<div class="view view-third animated flipInX">
+		<div class="view view-third ">
+
 		     <%= image_tag @selection.books[2].image_url %>  
 		     <div class="mask">  
 		     	<h2><%= @selection.books[2].title %></h2>  
 		     	<p><%= @selection.books[2].author %></p>
-		     	<p><%= @selection.books[2].content.truncate(350) %></p>  
+		     	<p><%= @selection.books[2].content.truncate(250) %></p>  
 		      <p> <%= link_to "Read More", @selection.books[2].detail_page_url, class:"info"	%> </p> 
 		       </div>
 		     </div>  
