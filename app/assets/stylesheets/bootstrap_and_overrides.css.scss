@@ -368,7 +368,6 @@ fieldset[disabled] .btn-twitter.active {
 .box .space { height: 30px; }
 
 
-
 body{padding-top:0px;}
 
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
@@ -401,12 +400,18 @@ color: #999;
 .top100books h3 {
   font-family: 'Special Elite', cursive;
 }
+.top100books {
+  background-image: none
+}
 
-/*.thumbnail {
-  width: 400px;
+.thumbnail {
+  width: 80px;
   height: auto;
+  float: center;
+  margin: 5px;
+  
 
-}*/
+}
 
 
 .user-profile {

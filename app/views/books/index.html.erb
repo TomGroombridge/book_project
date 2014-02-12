@@ -2,9 +2,9 @@
 <center><h3>The most loved books in the world.</h3></center>
 <div class="row">    
   <% @books.each do |book| %>
-    <div class="col-md-4">
+    <div class="col-md-1">
       <div class="thumbnail">
-        <i><%= image_tag book.image_url, class: 'thumbnail' %></i>
+        <i><%= image_tag book.thumbnail, class: 'thumbnail' %></i>
       </div>
     </div> 
   <% end %>
