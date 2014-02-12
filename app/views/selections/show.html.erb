@@ -1,24 +1,30 @@
+<nav class="navbar navbar-fixed-top navbar-tweet" role="navigation">
 <center>
-<div class="col-sm-4 col-xs-12 col-md-3 col-lg-6 col-lg-offset-2 user-profile">
+
     <% if @user %>
-        <%= image_tag(@user.avatar_url) if @user.avatar_url %>
+        <%= image_tag(@user.avatar_url, :class => "twitter-img") if @user.avatar_url %>
         <%= @user.name + "'s favourite books" %>
     <% end %>
 
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text=" I picked the books the changed my life. What are yours? #lifelibrary" data-lang="en" data-size="large" data-count="none">Tweet my LifeLibrary</a>
+    <a href="https://twitter.com/share"  data-text=" I picked the books the changed my life. What are yours? #lifelibrary" data-lang="en" data-size="large" data-count="none">Share my library</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
+
 </center>
+</nav>
 
 
-
-<div id="webbrowser">
-<%= render "create_books_button" %>
+<div class='container book-choices'>
+	<%= render "hover_effect_books" %>
 </div>
 
+<div class='container'>
 
-<%= render "create_books_button" %>
+	<div class="row">
 
-<%= render "hover_effect_books" %>
+		<%= render 'top10_books.html.erb' %>
 
-<%= render 'top10_books.html.erb' %>
+	</div>
+
+	<%= render :partial => 'layouts/footer' %>
+
+</div>

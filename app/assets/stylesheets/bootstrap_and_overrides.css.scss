@@ -408,19 +408,26 @@ color: #999;
   height: auto;
   float: center;
   margin: 5px;
-  
-
 }
 
 
-.user-profile {
-   border: 10px double;
-   padding: 10px;
+.navbar-tweet {
+/*   border: 10px double;*/
+   /*height: 10%;*/
+   /*padding: 10px;*/
    background-color: white;
    border-radius: 5px;
    /* The background will be inside the padding */ 
    background-origin: content-box;
    font-family: 'Lobster', cursive;
+   position: -webkit-sticky;  
+   top: 0;  
+   z-index: 1;
+}
+
+.twitter-img {
+  width: auto;
+  height: auto;
 }
 
 .twitter-share-button {
@@ -450,7 +457,10 @@ color: #999;
   margin-bottom: 76px;
 }
 
+.top10 iframe {
+  width: 100%;
+}
 
-
-
-
+.book-choices {
+  margin-top: 50px;
+}
