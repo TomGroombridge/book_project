@@ -58,13 +58,7 @@ $ ->
         $("#book_title").attr("placeholder", 'and another...')
 
         if $emptyBook.data('book-id') == 3
-          $('#book_title').width(388)
-          $('#book_title').val 'SHARE MY BOOKS'
-          $('#book_title').addClass("cat")
-          $('#book_title').css( 'cursor', 'pointer' );
-          $('.cat').on 'click', ->
-            $('#buttons button').click()
-
+          $('#book_title').width(300)
 
  
         $(".book-title").val " "
@@ -78,10 +72,6 @@ $ ->
       newIndex = 0
 
     bookView(books, $currentBook, newIndex) 
-
-
-
-
 
 
 
