@@ -4,8 +4,10 @@
 	<div class="row">
 
 		<div class="col-lg-4">  
-			<div class="view view-third">
-		      <%= image_tag @selection.books[0].image_url %>  
+			 <div class="view view-third">
+       <div class='image-box-other'>
+		      <%= image_tag @selection.books[0].image_url,  class: "panel-image-preview" %>  
+        </div>
 		     	<div class="mask"> 
 		     		<h2><%= @selection.books[0].title %></h2>
 		     		<p><%= @selection.books[0].author %></p> 
@@ -17,8 +19,9 @@
 		</div>
 		<div class="col-lg-4">  
 			<div class="view view-third">
-
-		     <%= image_tag @selection.books[1].image_url %>  
+        <div class='image-box-other'>
+		     <%= image_tag @selection.books[1].image_url, class: "panel-image-preview" %> 
+         </div> 
 		     <div class="mask">  
 		     	<h2><%= @selection.books[1].title %></h2>  
 		     	<p><%= @selection.books[1].author %></p>  
@@ -29,8 +32,9 @@
 		 </div>
 		<div class="col-lg-4">  
 		<div class="view view-third ">
-
-		     <%= image_tag @selection.books[2].image_url %>  
+        <div class='image-box-other'>
+		     <%= image_tag @selection.books[2].image_url, class: "panel-image-preview" %>  
+          </div>
 		     <div class="mask">  
 		     	<h2><%= @selection.books[2].title %></h2>  
 		     	<p><%= @selection.books[2].author %></p>

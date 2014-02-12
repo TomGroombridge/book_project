@@ -65,7 +65,7 @@ $ ->
         if $emptyBook.data('book-id') == 3
           $('#book_title').blur();
           # $('#book_title').attr('disabled', true);
-          $('#book_title').width(388)
+          $('#book_title').width(387)
           $('#book_title').val 'SHARE MY BOOKS'
           $('#book_title').addClass("cat")
           $('#book_title').css( 'cursor', 'pointer' );
