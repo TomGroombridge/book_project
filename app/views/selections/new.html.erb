@@ -62,9 +62,9 @@
           <li>
 
           <%= form_for @selection do |f| %>
-            <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book1' %>
-            <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book2' %>
-            <%= f.hidden_field 'book_ids', multiple: true, value: nil, id: 'book3' %>
+            <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book1' %>
+            <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book2' %>
+            <%= f.hidden_field 'book_ids', multiple: true, value: nil, class: 'book3' %>
             <%= f.button %>
             <% end %>
             </li>   

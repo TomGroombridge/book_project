@@ -1,23 +1,37 @@
-<nav class="navbar navbar-fixed-top navbar-tweet" role="navigation">
-<center>
+<div class="container">
 
-    <% if @user %>
-        <%= image_tag(@user.avatar_url, :class => "twitter-img") if @user.avatar_url %>
-        <%= @user.name + "'s favourite books" %>
-    <% end %>
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
+              <h1>
+                #dogears
+              </h1>
+         </div>
 
-    <a href="https://twitter.com/share"  data-text=" I picked the books the changed my life. What are yours? #lifelibrary" data-lang="en" data-size="large" data-count="none">Tweet me</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="col-xs-12 col-md-4 col-md-offset-3" id="top">
+            <div class="row">
+                <div class="tweetbar">
+                    <% if @user %>
+                        <%= image_tag(@user.avatar_url, :class => "twitter-img") if @user.avatar_url %>
+                        <%= @user.name + "'s favourite books" %>
+                    <% end %>
 
-</center>
-</nav>
+                <a href="https://twitter.com/share"  data-text="3 Books That Made Me #dogearedpages" data-lang="en" data-size="large" data-count="none">Tweet me</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tweetbar">
+                <p> HELL0 TOM</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<div class='container book-choices'>
-	<%= render "hover_effect_books" %>
-</div>
+    <div class='container book-choices'>
+    	<%= render "hover_effect_books" %>
+    </div>
 
-<div class='container'>
 
 	<div class="row">
 

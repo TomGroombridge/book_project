@@ -82,6 +82,13 @@
   font-weight: bold; 
 }
 
+.view button, .view button:hover, 
+.view button:visited, .view button:focus,
+.view button:active {
+    background-color: black;
+    border-color: black;
+}
+
 .view h2 {
     text-transform: uppercase;
     color: #fff;
