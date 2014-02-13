@@ -5,4 +5,4 @@
 
 $ ->
   # $('#book_title').autocomplete({ source: '/suggestions.json', minLength: 5, autoFocus: false })
-  $('.quotes').quovolver(500, 5000)
+  $('.quotes').quovolver(500, 6000)

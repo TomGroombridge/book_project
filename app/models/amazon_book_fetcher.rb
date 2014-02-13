@@ -4,7 +4,7 @@ require 'hmac-sha2'
 class AmazonBookFetcher
 
   ACCESS_IDENTIFIER = 'AKIAJIT2TOCWJOPENM7Q'
-  SECRET_IDENTIFIER = ENV['S3_SECRET']
+  SECRET_IDENTIFIER = Rails.application.secrets.s3_secret
 
   AMAZON_ENDPOINT = 'http://webservices.amazon.co.uk/onca/xml'
 

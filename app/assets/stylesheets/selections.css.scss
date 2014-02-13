@@ -63,12 +63,19 @@
     background-color: #fff;
     padding: 25px;
     border: 2px solid #0C063C;
+    margin-bottom: 20px;
+}
+.image-box h1 {
+    font-family: 'Special Elite', cursive;
+    color: #0C063C;
+    font-size: 14px; 
 }
 
 .image-box-other {
     background-color: #fff;
     padding: 25px;
     border: 2px solid #0C063C;
+    margin-bottom: 20px;
 }
 
 .spinner {
@@ -80,6 +87,11 @@
   color: #0C063C;
   text-align: center;
   font-weight: bold; 
+}
+
+button.close {
+    color:white;
+    background-color: black;
 }
 
 .view button, .view button:hover, 
@@ -100,6 +112,11 @@
     margin: 20px 0 0 0
 }
 
+.view h4 {
+    font-family:'Special Elite', cursive;
+    color: white;
+}
+
 .view p {
     font-family: 'Special Elite', cursive;
     font-size: 16px;
@@ -118,6 +135,12 @@
     text-transform: uppercase;
     box-shadow: 0 0 1px #000
 }
+
+.view a.close {
+    font-size: 30px;
+    font-color: white;
+}
+
 
 .view a.info:hover {
     box-shadow: 0 0 5px #000
@@ -166,6 +189,11 @@
 .view-third:hover::-webkit-scrollbar p { 
     transform: translateX(0px) rotate(0deg);
     transition-delay: 1.0s;
+}
+
+.view-third .mask p {
+    height: 70%;
+    overflow: scroll;
 }
 
 
