@@ -207,14 +207,14 @@ margin-top: 5%
   body{
   background-image: asset-url("mobilebackground.jpg");
   background-size: 100%;
-  padding: 0;
+  padding: 0; 
   margin-top: none;
   max-width: 320px;
   }
 
-  #webbrowser {
+ /* #webbrowser {
   display: none;
-  }
+  }*/
 
   .navbar-header {
   vertical-align: middle;
