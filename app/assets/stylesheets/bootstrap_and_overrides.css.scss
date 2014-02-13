@@ -515,6 +515,7 @@ color: #999;
 .tweetbar {
    background-color: white;
    border-radius: 5px;
+   font-size: 17px;
    /* The background will be inside the padding */ 
    background-origin: content-box;
    font-family: 'Special Elite', cursive;
@@ -523,7 +524,6 @@ color: #999;
    border: 2px solid #0C063C;
    margin: auto;
    padding: 10px;
-
 }
 
 .tweetbar-bottom p {
@@ -538,7 +538,14 @@ color: #999;
    border: 2px solid #0C063C;
    margin: auto;
    padding-top: 10px;
+}
 
+.soup {
+  width: 50%;
+  float: left;
+}
+.clear {
+  clear:both;
 }
 
 a:hover, a:visited, a:focus, a:active {
@@ -551,9 +558,6 @@ a:hover, a:visited, a:focus, a:active {
   height: auto;
   border-radius: 3px;
 }
-
-/*  Top-bar end  */
-
 
 
 .books-tweets {
