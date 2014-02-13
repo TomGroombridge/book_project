@@ -219,8 +219,14 @@ margin-top: 5%
     display: none;
   }
 
+  .carousel-indicators {
+    margin: 14px;
+    color: black;
+  }
+
   .carousel-inner {
     background-color: #ffffff;
+    border: 2px solid #0C063C;
   }
 
   .navbar-header {
@@ -232,12 +238,26 @@ margin-top: 5%
     font-size: 15px;
   }
 
+  .icon-chevron-right{
+    position: absolute;
+    top: 50%;
+  }
+
+  .icon-chevron-left{
+    position: absolute;
+    top: 50%;
+  }
+
+
+
   .carousel-control{
     position:absolute;
     top: 193px;
     color: black;
 
   }
+
+
 
   p.bubble {
     background-color: #FFFFFF;

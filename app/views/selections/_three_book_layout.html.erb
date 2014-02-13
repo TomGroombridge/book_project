@@ -1,3 +1,5 @@
+<div class="non-mobile" id="webbrowser">
+
 <div class="row">
   <div class="col-md-4 book" data-book-id="1" data-filled='false'> 
     <!-- <div class="numbertitle"> -->
@@ -68,3 +70,76 @@
     </div>
   </div>
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="non-web" id="mobile">
+  
+   
+  <div class='row'>
+    <div class='col-md-offset-2 col-md-8'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li class="dot" data-target="#quote-carousel" data-slide-to="1" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+          <li data-target="#quote-carousel" data-slide-to="3"></li>
+        </ol>
+                  <!-- <img src="images/Mr._Tickle.jpg" style="width: 200px;"> -->
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+        
+          <!-- Quote 1 -->
+          <div class="item active">    
+            <div class="book" data-book-id="1" data-filled='false'> 
+              <blockquote>
+                <%= image_tag("", class: "panel-image-preview", style:"width: 150px;") %>            
+              </blockquote>
+                <button class='close'>delete</button>
+                <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+            </div>
+          </div>
+          <!-- Quote 2 -->
+
+          <div class="item">
+            <div class="book" data-book-id="2" data-filled='false'> 
+              <blockquote>
+                <%= image_tag("", class: "panel-image-preview", style:"width: 150px;") %>  
+              </blockquote>
+                <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+            </div>
+          </div>  
+          <!-- Quote 3 -->
+        <div class="item">
+          <div class="book" data-book-id="3" data-filled='false'> 
+            <blockquote>
+              <%= image_tag("", class: "panel-image-preview", style:"width: 150px;") %>
+            </blockquote>
+              <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+          </div>
+        </div>
+        
+      </div>                          
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="icon-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="icon-chevron-right"></i></a>
+    </div>
+  </div>
+  
+
+
+  </div>
+</div>
+

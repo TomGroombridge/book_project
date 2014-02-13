@@ -69,7 +69,7 @@ $ ->
         $emptyBook.data('all-books', books)
         
 
-        $("#sidebar-wrapper").toggleClass("active")
+        $("#sidebar-wrapper").click
 
 
         $("#book_title").attr("placeholder", 'and another...')
