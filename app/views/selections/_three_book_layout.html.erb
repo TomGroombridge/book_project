@@ -105,11 +105,12 @@
           <!-- Quote 1 -->
           <div class="item active">    
             <div class="book" data-book-id="1" data-filled='false'> 
+            <%= image_tag 'ajax-loader.gif', class: 'spinner2', :style => "display: none" %>
               <blockquote>
-                <%= image_tag("", class: "panel-image-preview", style:"width: 150px;") %>            
-              </blockquote>
-                <button class='close'>delete</button>
+                <%= image_tag("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRsq3p9YpKBhqnO26Kj6ptABh0cVYCN_4T8CimRpJ0ZiFvEJZyy", class: "panel-image-preview", style:"width: 150px;") %>            
                 <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+              </blockquote>
+                <button class='btn-success delete_book'>delete book</button>
             </div>
           </div>
           <!-- Quote 2 -->
@@ -117,18 +118,20 @@
           <div class="item">
             <div class="book" data-book-id="2" data-filled='false'> 
               <blockquote>
-                <%= image_tag("", class: "panel-image-preview", style:"width: 150px;") %>  
-              </blockquote>
+                <%= image_tag("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRsq3p9YpKBhqnO26Kj6ptABh0cVYCN_4T8CimRpJ0ZiFvEJZyy", class: "panel-image-preview", style:"width: 150px;") %>  
                 <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+              </blockquote>
+              <button class='btn-success delete_book'>delete book</button>
             </div>
           </div>  
           <!-- Quote 3 -->
         <div class="item">
           <div class="book" data-book-id="3" data-filled='false'> 
             <blockquote>
-              <%= image_tag("", class: "panel-image-preview", style:"width: 150px;") %>
-            </blockquote>
+              <%= image_tag("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRsq3p9YpKBhqnO26Kj6ptABh0cVYCN_4T8CimRpJ0ZiFvEJZyy", class: "panel-image-preview", style:"width: 150px;") %>
               <button class="btn-success next_book" id="choose_another">Wrong Cover?</button>
+            </blockquote>
+            <button class='btn-success delete_book'>delete book</button>
           </div>
         </div>
         

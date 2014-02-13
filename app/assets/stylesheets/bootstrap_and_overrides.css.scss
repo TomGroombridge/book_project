@@ -27,6 +27,7 @@
   display: none;
 }
 
+
 #top {
   margin-top: 5%;
   min-height: 130px;
@@ -223,6 +224,17 @@ margin-top: 5%
     margin: 14px;
     color: black;
   }
+
+  .btn-success.next_book {
+    background-color: black;
+    border-color: black;
+  }
+
+
+  .btn-success.delete_book{
+    background-color: black;
+    border-color: black;
+  }  
 
   .carousel-inner {
     background-color: #ffffff;
