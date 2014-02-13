@@ -8,6 +8,7 @@ gem 'rails', '4.1.0.beta1'
 gem 'httparty'
 
 # gem for parsing the xml returned by amazon 
+gem 'nokogiri'
 gem 'nori'
 gem 'fastercsv'
 
