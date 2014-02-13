@@ -43,7 +43,9 @@ $ ->
 
   $('.new_book').on 'submit', (event) ->
     event.preventDefault()
+
     return unless $("#book_title").val()
+    $('.spinner2').show()
 
     data =  $(this).serialize()
 
@@ -57,16 +59,23 @@ $ ->
       if books.error
         alert("Yikes, we couldn't find that title, please try again using the following format 'title' by 'author'")
         $emptyBook.find('.spinner').hide()
+        $('.spinner2').hide()
         $emptyBook.find('h3').slideDown()
         return
       else
-
+        $('.spinner2').hide()
         bookView(books, $emptyBook, 0)
         bookId = $emptyBook.attr("data-book-id") 
         $('.book'+bookId).val books[0].id
 
         $emptyBook.attr('data-filled', true)
         $emptyBook.data('all-books', books)
+
+        setTimeout (->
+          $(".icon-chevron-right").click()
+          return
+        ), 2000
+
         
 
         $("#sidebar-wrapper").click

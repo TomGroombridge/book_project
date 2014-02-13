@@ -27,6 +27,7 @@
   display: none;
 }
 
+
 #top {
   margin-top: 5%;
   min-height: 130px;
@@ -215,6 +216,18 @@ margin-top: 5%
   max-width: 320px;
   }
 
+  .navbar-fixed-bottom {
+    padding-bottom: 75px;
+  }
+
+  .carousel slide{
+    padding-bottom: 20px;
+  }
+
+  .search-row {
+    margin-top: -100px;
+  }
+
   .non-mobile {
     display: none;
   }
@@ -223,6 +236,17 @@ margin-top: 5%
     margin: 14px;
     color: black;
   }
+
+  .btn-success.next_book {
+    background-color: black;
+    border-color: black;
+  }
+
+
+  .btn-success.delete_book{
+    background-color: black;
+    border-color: black;
+  }  
 
   .carousel-inner {
     background-color: #ffffff;
