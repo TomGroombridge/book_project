@@ -201,9 +201,7 @@ margin-top: 5%
 
 @media only screen and (min-width: 0px) and (max-width: 400px) {
 
-  html {
-  size: 100%;
-  }
+
 
   body{
   
@@ -217,12 +215,24 @@ margin-top: 5%
     display: none;
   }
 
- /* #webbrowser {
-  display: none;
-  }*/
+  .carousel-inner {
+    background-color: #ffffff;
+  }
 
   .navbar-header {
   vertical-align: middle;
+  }
+
+  #book_title.form-control {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .carousel-control{
+    position:absolute;
+    top: 193px;
+    color: black;
+
   }
 
   p.bubble {
@@ -279,7 +289,6 @@ margin-top: 5%
 
   #mobile {
   display: block;
-  max-width: 320px;
   }
 
 
