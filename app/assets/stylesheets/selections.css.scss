@@ -89,11 +89,6 @@
   font-weight: bold; 
 }
 
-button.close {
-    color:white;
-    background-color: black;
-}
-
 .view button, .view button:hover, 
 .view button:visited, .view button:focus,
 .view button:active {
@@ -135,12 +130,6 @@ button.close {
     text-transform: uppercase;
     box-shadow: 0 0 1px #000
 }
-
-.view a.close {
-    font-size: 30px;
-    font-color: white;
-}
-
 
 .view a.info:hover {
     box-shadow: 0 0 5px #000

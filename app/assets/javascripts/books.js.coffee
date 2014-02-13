@@ -25,7 +25,7 @@ $ ->
     $('#book'+bookId).val books[index].id
 
 
-  $('.book').on 'click', '.close', (event) ->
+  $('.book').on 'click', '.delete_book', (event) ->
     event.preventDefault()
     $book = $(this).closest('.book')
 
