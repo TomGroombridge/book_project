@@ -35,8 +35,9 @@
 }
 
 
-#mobile {
+.non-web {
   display: none;
+
 }
 
 #intro {
@@ -205,11 +206,15 @@ margin-top: 5%
   }
 
   body{
-  background-image: asset-url("mobilebackground.jpg");
+  
   background-size: 100%;
   padding: 0; 
   margin-top: none;
   max-width: 320px;
+  }
+
+  .non-mobile {
+    display: none;
   }
 
  /* #webbrowser {
@@ -274,6 +279,7 @@ margin-top: 5%
 
   #mobile {
   display: block;
+  max-width: 320px;
   }
 
 
