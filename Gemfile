@@ -12,6 +12,8 @@ gem 'nokogiri'
 gem 'nori'
 gem 'fastercsv'
 
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
 gem 'ruby-hmac'
 
 #Use postgresql at the database for Active Record

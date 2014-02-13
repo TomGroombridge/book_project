@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alexpeattie/heroku_secrets.git
+  revision: b0c5f0680c9e57f7749d404426b8841d6ffe0114
+  specs:
+    heroku_secrets (0.0.2)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 4d0bd4271f7f01d79bbb2b72c04f30a5766db0ef
   branch: bootstrap3
@@ -202,6 +208,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   fastercsv
+  heroku_secrets!
   httparty
   jbuilder (~> 1.2)
   jquery-rails
