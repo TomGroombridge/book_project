@@ -62,7 +62,7 @@ $ ->
         $emptyBook.data('all-books', books)
         
 
-        $("#sidebar-wrapper").toggleClass("active")
+        $("#sidebar-wrapper").click
 
 
         $("#book_title").attr("placeholder", 'and another...')
@@ -70,7 +70,7 @@ $ ->
         if $emptyBook.data('book-id') == 3
           $('#book_title').blur();
           # $('#book_title').attr('disabled', true);
-          $('#book_title').width($(window).width() * 0.4)
+          $('#book_title').width($(window).width() * 0.3)
           $('#book_title').val 'SHARE MY BOOKS'
           $('#book_title').addClass("cat")
           $('#book_title').css( 'cursor', 'pointer' );
