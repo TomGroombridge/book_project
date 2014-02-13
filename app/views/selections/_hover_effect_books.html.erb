@@ -1,6 +1,6 @@
 <!-- WEB BROWSER THREE BOOKS -->
 
-<div id="webbrowser">
+<div class="non-mobile" id="webbrowser">
 	<div class="row">
 
 		<div class="col-lg-4">  
@@ -72,13 +72,9 @@
 
 <!-- MOBILE CAROUSLEL THREE BOOKS -->
 
-<div id="mobile">
+<div class="non-web" id="mobile">
 	
-	  <div class="row">
-    <div class='col-md-offset-2 col-md-8 text-center'>
-    <h4>@chrishillonline's #dogearedpages</h4>
-    </div>
-  </div>
+	 
   <div class='row'>
     <div class='col-md-offset-2 col-md-8'>
       <div class="carousel slide" data-ride="carousel" id="quote-carousel">
@@ -98,31 +94,31 @@
             <blockquote>
               <%= image_tag @selection.books[0].image_url, style:"width: 150px;" %> 
               <div class="container">
-                  <p class="text-center"><strong>Rodger Hargreeves</strong><p>
-                  <p class="text-center"><strong>Mr Tickle</strong><p>
-                  <p class="text-center"> View more...</a></p><br>
+                  <p class="text-center"><strong><%= @selection.books[0].title %></strong><p>
+                  <p class="text-center"><strong><%= @selection.books[0].author %></strong><p>
+                  <p class="text-center"><%= link_to "View more...", @selection.books[0].detail_page_url, class:"btn btn-lg btn-primary"  %></p><br>
               </div>
             </blockquote>
           </div>
           <!-- Quote 2 -->
           <div class="item">
-            <blockquote>
-              <%= image_tag @selection.books[1].image_url, style:"width: 150px;" %>  
+           <blockquote>
+              <%= image_tag @selection.books[1].image_url, style:"width: 150px;" %> 
               <div class="container">
-                <p class="text-center"><strong>Rodger Hargreeves</strong><p>  
-                <p class="text-center"><strong>Mr Bump</strong><p>
-                <p class="text-center"><a class="btn btn-lg btn-primary" target="blank" href="http://www.amazon.co.uk/Mr-Bump-Mr-Men-Digital/dp/1405235578/ref=sr_1_1?s=books&ie=UTF8&qid=1391873641&sr=1-1&keywords=mr+bump" role="button">View more...</a></p><br>
+                  <p class="text-center"><strong><%= @selection.books[1].title %></strong><p>
+                  <p class="text-center"><strong><%= @selection.books[1].author %></strong><p>
+                  <p class="text-center"><%= link_to "View more...", @selection.books[1].detail_page_url, class:"btn btn-lg btn-primary"  %></p><br>
               </div>
             </blockquote>
           </div>
           <!-- Quote 3 -->
           <div class="item">
             <blockquote>
-              <%= image_tag @selection.books[2].image_url, style:"width: 150px;" %>  
+              <%= image_tag @selection.books[1].image_url, style:"width: 150px;" %> 
               <div class="container">
-                <p class="text-center"><strong>Rodger Hargreeves</strong><p>
-                <p class="text-center"><strong>Mr Strong</strong><p>
-                <p class="text-center"><a class="btn btn-lg btn-primary" target="blank" href="http://www.amazon.co.uk/Mr-Strong-Men-Classic-Library/dp/1405235721/ref=sr_1_1?s=books&ie=UTF8&qid=1391873715&sr=1-1&keywords=mr+strong" role="button">View more...</a></p><br>
+                  <p class="text-center"><strong><%= @selection.books[1].title %></strong><p>
+                  <p class="text-center"><strong><%= @selection.books[1].author %></strong><p>
+                  <p class="text-center"><%= link_to "View more...", @selection.books[1].detail_page_url, class:"btn btn-lg btn-primary"  %></p><br>
               </div>
             </blockquote>
           </div>
@@ -134,10 +130,7 @@
       </div>                          
     </div>
   </div>
-  <div class="container">
-    <p class="text-center"><strong>Someone will be intrested in yours..</strong></p>
-    <p class="text-center"><a class="btn btn-lg btn-primary" href="index.html" role="button">Share mine</a></p>
-	</div>
+  
 
 
 </div>
