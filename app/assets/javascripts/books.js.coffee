@@ -35,6 +35,10 @@ $ ->
     console.log($book.find('.image-box'))
     $book.find('.image-box').hide()
     $book.find('h3').slideDown()
+    $("#book_title").val('')
+    $("#book_title").attr("placeholder", 'and another...')
+
+    $("#book_title").removeClass('cat').off('click')
 
 
   $('.new_book').on 'submit', (event) ->
@@ -81,11 +85,12 @@ $ ->
 
         if $emptyBook.data('book-id') == 3
           $('#book_title').blur();
+          $('#book_title').attr("style", 'text-align: center')
           # $('#book_title').attr('disabled', true);
           $('#book_title').width($(window).width() * 0.37)
           $('#book_title').val 'SHARE MY BOOKS'
           $('#book_title').addClass("cat")
-          $('#book_title').css( 'cursor', 'pointer' );
+          # $('#book_title').css( 'cursor', 'pointer' );
           $('.cat').on 'click', ->
             $('#buttons button').click()
 

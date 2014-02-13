@@ -10,36 +10,36 @@
         <div class="col-xs-12 col-md-4 col-md-offset-3" id="top">
             <div class="row">
                 <div class="tweetbar">
+                 <div class="soup">
                     <% if @user %>
                         <%= image_tag(@user.avatar_url, :class => "twitter-img") if @user.avatar_url %>
-                        <%= @user.name + "'s dog ears" %>
+                        <%= @user.name %>
                     <% end %>
-
-                        <style type="text/css" media="screen">
+                 </div>
+                 <div class="soup">
+                    <style type="text/css" media="screen">
                           #custom-tweet-button a {
-                            display: block;
-                            padding: 2px 5px 2px 20px;
-                            background: url('https://twitter.com/favicons/favicon.ico') 1px center no-repeat;
-                            border: 2px solid #0C063C;
+                          font-size: 20px;
                           }
                         </style>
                          
                         <div id="custom-tweet-button">
-                          <a href="http://twitter.com/share?url=http%3A%2F%2Fdev.dogears./users/#{current_user.name}.com%2Fpages%2Ftweet-button&text=3%20books%20that%20made%20me" target="_blank">Tweet My Books</a>
+                          <a href="<%= "http://twitter.com/share?url=http%3A%2F%2Fdev.dogearedpages.me/users/#{current_user.name}&text=3%20books%20that%20made%20me%20%23dogearedpages"%>" target="_blank"><i class="fa fa-twitter fa-2x"></i> Tweet Now</a>
                         </div>
-
-
-
-
-                <a href="https://twitter.com/share" class="twitter-share-button" data-text="3 Books That Made Me #dogearedpages" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Share my Books<i class="fa fa-twitter fa-4x"></i></a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                 </div>
+                 <div class="clear">
+                 </div>
+                </div>
             </div>
             <div class="row">
                 <div class="tweetbar-bottom">
                 <p><%= link_to new_selection_path do %><i style="color:#0C063C" class="fa fa-heart"></i> Choose My Books  
                 <% end %></p>
                 </div>
-                </div>
+            </div>
+
+        
+     
               
                 
     <div class="non-web" id="mobile">
@@ -47,9 +47,9 @@
         <a class="btn btn-md btn-primary" href="#top_10_books">Top 10 Books</a>
         <a class="btn btn-md btn-primary" href="#tweets">Tweets</a>
       </div>
-    </div>  
-        </div>
     </div>
+            
+    </div>   
 
 
     <div class='container book-choices'>
@@ -60,9 +60,12 @@
 	<div class="row">
 
 		<%= render 'top10_books.html.erb' %>
+    </div>
 
 	</div>
 
 	<%= render :partial => 'layouts/footer' %>
 
+    </div>
 </div>
+
