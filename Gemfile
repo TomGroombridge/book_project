@@ -55,6 +55,8 @@ gem 'twitter-bootstrap-rails', github:'seyhunak/twitter-bootstrap-rails', branch
 
 gem 'jquery-ui-rails'
 
+gem 'rails_12factor', group: :production
+
 # gem 'less'
 
 # gem 'therubyracer'
