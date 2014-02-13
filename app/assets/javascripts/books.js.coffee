@@ -16,8 +16,8 @@ $ ->
     
     book.find('h4').text(books[index].author)
     book_desc = books[index].content
-    if book_desc.length > 250
-      book_desc = book_desc.substring(0,250) + "..."
+    # if book_desc.length > 250
+    #   book_desc = book_desc.substring(0,250) + "..."
     book.find('p').html(book_desc )
     
     book.data('book-index', index)
@@ -31,6 +31,11 @@ $ ->
 
     $book.find('.panel-image-preview').attr('src', '')
     $book.attr('data-filled', false)
+
+    console.log($book.find('.image-box'))
+    $book.find('.image-box').hide()
+    $book.find('h3').slideDown()
+
 
   $('.new_book').on 'submit', (event) ->
     event.preventDefault()
@@ -75,7 +80,6 @@ $ ->
 
  
         $(".book-title").val " "
-        $(".book-title").autocomplete "close"
 
   $(".btn-success, .next_book").on "click", ->
     $currentBook = $(this).closest('.book')

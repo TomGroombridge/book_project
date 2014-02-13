@@ -8,8 +8,11 @@ gem 'rails', '4.1.0.beta1'
 gem 'httparty'
 
 # gem for parsing the xml returned by amazon 
+gem 'nokogiri'
 gem 'nori'
 gem 'fastercsv'
+
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 gem 'ruby-hmac'
 
@@ -54,6 +57,8 @@ gem 'devise'
 gem 'twitter-bootstrap-rails', github:'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 
 gem 'jquery-ui-rails'
+
+gem 'rails_12factor', group: :production
 
 # gem 'less'
 
