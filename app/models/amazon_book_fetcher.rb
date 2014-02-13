@@ -60,7 +60,7 @@ class AmazonBookFetcher
 
   def parse_response(response)
     parsed = Nori.new.parse(response.body)
-    books = parsed["ItemSearchResponse"]["Items"]["Item"].first(3)
+    books = parsed["ItemSearchResponse"]["Items"]["Item"].first(3) rescue nil
     return false unless books
     
     books.map do |book|
@@ -97,7 +97,5 @@ class AmazonBookFetcher
         content = "No Description"
       end
     end
-
-    content.gsub(/<I>|<\/I>|<p>|<\/p>/, '')
   end
 end

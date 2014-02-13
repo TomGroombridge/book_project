@@ -71,6 +71,7 @@
     font-size: 14px; 
 }
 
+
 .image-box-other {
     background-color: #fff;
     padding: 25px;
@@ -89,11 +90,6 @@
   font-weight: bold; 
 }
 
-button.close {
-    color:white;
-    background-color: black;
-}
-
 .view button, .view button:hover, 
 .view button:visited, .view button:focus,
 .view button:active {
@@ -103,6 +99,7 @@ button.close {
 
 .view h2 {
     text-transform: uppercase;
+    font-family: 'Special Elite', cursive;
     color: #fff;
     text-align: center;
     position: relative;
@@ -122,7 +119,7 @@ button.close {
     font-size: 16px;
     position: relative;
     color: #fff;
-    padding: 10px 20px 20px;
+ /*   padding: 10px 20px 20px;*/
     text-align: center
 }
 
@@ -136,12 +133,6 @@ button.close {
     box-shadow: 0 0 1px #000
 }
 
-.view a.close {
-    font-size: 30px;
-    font-color: white;
-}
-
-
 .view a.info:hover {
     box-shadow: 0 0 5px #000
 }
@@ -154,6 +145,7 @@ button.close {
     opacity: 0;
    	transform: translate(460px, -100px) rotate(180deg);
     transition: all 0.5s 0.2s ease-in-out;
+    padding: 10px 10px 30px 10px;
 }
 .view-third h2{
     transform: translateY(-100px);
