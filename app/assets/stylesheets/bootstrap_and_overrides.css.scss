@@ -178,6 +178,8 @@ margin-top: 5%
 }
 
 
+
+
 /*#book_title {*/
 .form-control {
   -webkit-appearance: none;
@@ -479,20 +481,6 @@ color: #999;
 
 
 
-
-/*.twitter-share-button {
-  float: center;
-  padding: 0px;
-}*/
-
-/*#tweeting {
-  display: none;
-}*/
-
-/*#tweeting.tweetnow {
-  display: block;
-}*/
-
 .new_book {
   text-align: center
 }
@@ -511,25 +499,43 @@ color: #999;
   margin-top: 50px;
 }
 
-/*  Top-bar start  */
+#widget {
+  padding-top: 10px;
+}
 
 .tweetbar {
-/*   border: 10px double;*/
-   /*height: 10%;*/
-   /*padding: 10px;*/
    background-color: white;
    border-radius: 5px;
    /* The background will be inside the padding */ 
    background-origin: content-box;
-   position: -webkit-sticky;  
-   top: 0;  
-   z-index: 1;
    font-family: 'Special Elite', cursive;
    color: #0C063C;
    border-radius: 5px;
    border: 2px solid #0C063C;
+   margin: auto;
+   padding: 10px;
 
 }
+
+.tweetbar-bottom p {
+   font-size: 25px;
+   background-color: white;
+   border-radius: 5px;
+   /* The background will be inside the padding */ 
+   background-origin: content-box;
+   font-family: 'Special Elite', cursive;
+   color: #0C063C;
+   border-radius: 5px;
+   border: 2px solid #0C063C;
+   margin: auto;
+   padding: 2px;
+
+}
+
+a:hover, a:visited, a:focus, a:active {
+    color: #0C063C;
+}
+
 
 .twitter-img {
   width: auto;
@@ -585,4 +591,6 @@ color: #999;
   color: #0C063C;
   border: 1px solid #0C063C;
  }
+
+
 

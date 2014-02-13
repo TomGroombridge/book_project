@@ -18,7 +18,7 @@ $ ->
     book_desc = books[index].content
     # if book_desc.length > 250
     #   book_desc = book_desc.substring(0,250) + "..."
-    book.find('p').html(book_desc )
+    book.find('p').html(book_desc)
     
     book.data('book-index', index)
     bookId = book.attr("data-book-id")
@@ -51,7 +51,10 @@ $ ->
 
     $.post '/books', data, (books) ->
       if books.error
-        alert("No book found with that title")
+        alert("Yikes, we couldn't find that title, please try again using the following format 'title' by 'author'")
+        $emptyBook.find('.spinner').hide()
+        $emptyBook.find('h3').slideDown()
+        return
       else
 
         bookView(books, $emptyBook, 0)
@@ -90,10 +93,3 @@ $ ->
       newIndex = 0
 
     bookView(books, $currentBook, newIndex) 
-
-
-
-
-
-
-

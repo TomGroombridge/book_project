@@ -71,6 +71,7 @@
     font-size: 14px; 
 }
 
+
 .image-box-other {
     background-color: #fff;
     padding: 25px;
@@ -98,6 +99,7 @@
 
 .view h2 {
     text-transform: uppercase;
+    font-family: 'Special Elite', cursive;
     color: #fff;
     text-align: center;
     position: relative;
@@ -117,7 +119,7 @@
     font-size: 16px;
     position: relative;
     color: #fff;
-    padding: 10px 20px 20px;
+ /*   padding: 10px 20px 20px;*/
     text-align: center
 }
 
@@ -143,6 +145,7 @@
     opacity: 0;
    	transform: translate(460px, -100px) rotate(180deg);
     transition: all 0.5s 0.2s ease-in-out;
+    padding: 10px 10px 30px 10px;
 }
 .view-third h2{
     transform: translateY(-100px);

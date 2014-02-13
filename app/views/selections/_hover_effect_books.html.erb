@@ -10,8 +10,8 @@
         </div>
 		     	<div class="mask"> 
 		     		<h2><%= @selection.books[0].title %></h2>
-		     		<p><%= @selection.books[0].author %></p> 
-		     		<p><%= @selection.books[0].content.truncate(250) %></p>
+		     		<h4><%= @selection.books[0].author %></h4> 
+		     		<p><%= @selection.books[0].content.truncate(250).html_safe %></p>
 		     		<p> <%= link_to "Read More", @selection.books[0].detail_page_url, class:"info"	%> </p>
 		       	  
 		     </div>  
@@ -24,8 +24,8 @@
          </div> 
 		     <div class="mask">  
 		     	<h2><%= @selection.books[1].title %></h2>  
-		     	<p><%= @selection.books[1].author %></p>  
-		     	<p><%= @selection.books[1].content.truncate(250) %></p>
+		     	<h4><%= @selection.books[1].author %></h4>  
+		     	<p><%= @selection.books[1].content.truncate(250).html_safe %></p>
 		      <p> <%= link_to "Read More", @selection.books[1].detail_page_url, class:"info"	%> </p>
 		      </div>
 		    </div> 
@@ -37,8 +37,8 @@
           </div>
 		     <div class="mask">  
 		     	<h2><%= @selection.books[2].title %></h2>  
-		     	<p><%= @selection.books[2].author %></p>
-		     	<p><%= @selection.books[2].content.truncate(250) %></p>  
+		     	<h4><%= @selection.books[2].author %></h4>
+		     	<p><%= @selection.books[2].content.truncate(250).html_safe %></p>  
 		      <p> <%= link_to "Read More", @selection.books[2].detail_page_url, class:"info"	%> </p> 
 		       </div>
 		     </div>  
