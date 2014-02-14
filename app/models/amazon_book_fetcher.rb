@@ -24,7 +24,7 @@ class AmazonBookFetcher
     {
       'Service' => 'AWSECommerceService',
       'AWSAccessKeyId' => 'AKIAJIT2TOCWJOPENM7Q',
-      'AssociateTag' => 'www.chrishillio-20',
+      'AssociateTag' => 'wwwchrishillio-20',
       'Operation'=> 'ItemSearch',
       'SearchIndex' => 'Books',
       # 'Power' => 'title:To%20Kill%20A%20Mockingbird%20and%20author:Harper%20Lee', 
