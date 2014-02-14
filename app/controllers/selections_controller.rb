@@ -10,6 +10,7 @@ class SelectionsController < ApplicationController
     @selection.user = current_user
     @selection.save
       if current_user
+        # sign_in_and_redirect current_user //do this properly, check previous code for sign in and redirect. it will probably need a user and a path
         redirect_to "/users/#{current_user.name}"
       else
         session[:selection_id] = @selection.id
