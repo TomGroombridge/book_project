@@ -16,7 +16,8 @@
                         <%= @user.name %>
                     <% end %>
                  </div>
-                 <div class="soup">
+                <% if user_signed_in? %>
+                    <div class="soup">
                     <style type="text/css" media="screen">
                           #custom-tweet-button a {
                           font-size: 20px;
@@ -26,16 +27,19 @@
                         <div id="custom-tweet-button">
                           <a href="<%= "http://twitter.com/share?url=http%3A%2F%2Fdev.dogearedpages.me/users/#{current_user.name}&text=3%20books%20that%20made%20me%20%23dogearedpages"%>" target="_blank"><i class="fa fa-twitter fa-2x"></i> Tweet Now</a>
                         </div>
-                 </div>
+                    </div>
+                 <% end %>
                  <div class="clear">
                  </div>
                 </div>
             </div>
-            <div class="row">
+            <% if current_user.id == nil %>
+                <div class="row">
                 <div class="tweetbar-bottom">
                 <p><%= link_to new_selection_path do %><i style="color:#0C063C" class="fa fa-heart"></i> Choose My Books  
                 <% end %></p>
                 </div>
+            <% end %>
             </div>
 
         
