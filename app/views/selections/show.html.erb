@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-1" id="top">
               <h1>
-                #dogearedpages
+                #dogeared
               </h1>
          </div>
 
@@ -16,7 +16,7 @@
                         <%= @user.name %>
                     <% end %>
                  </div>
-                 <div class="soup">
+                    <div class="soup">
                     <style type="text/css" media="screen">
                           #custom-tweet-button a {
                           font-size: 20px;
@@ -24,14 +24,14 @@
                         </style>
                          
                         <div id="custom-tweet-button">
-                          <a href="<%= "http://twitter.com/share?url=http%3A%2F%2Fdogearedpages.me/users/#{@user.name}&text=3%20books%20that%20made%20me%20%23dogearedpages"%>" target="_blank"><i class="fa fa-twitter fa-2x"></i> Tweet Now</a>
+                          <a href="<%= "http://twitter.com/share?url=http%3A%2F%2Fdogearedpages.me/users/#{@user.name}&text=My%20%23dogeared%20books"%>" target="_blank"><i class="fa fa-twitter fa-2x"></i> Tweet Now</a>
                         </div>
-                 </div>
+                    </div>
                  <div class="clear">
                  </div>
                 </div>
             </div>
-            <div class="row">
+                <div class="row">
                 <div class="tweetbar-bottom">
                 <p><%= link_to new_selection_path do %><i style="color:#0C063C" class="fa fa-heart"></i> Choose My Books  
                 <% end %></p>

@@ -4,7 +4,7 @@ require 'hmac-sha2'
 class AmazonBookFetcher
 
   ACCESS_IDENTIFIER = 'AKIAJIT2TOCWJOPENM7Q'
-  SECRET_IDENTIFIER = ENV['S3_SECRET']
+  SECRET_IDENTIFIER = Rails.application.secrets.s3_secret
 
   AMAZON_ENDPOINT = 'http://webservices.amazon.co.uk/onca/xml'
 
@@ -24,7 +24,7 @@ class AmazonBookFetcher
     {
       'Service' => 'AWSECommerceService',
       'AWSAccessKeyId' => 'AKIAJIT2TOCWJOPENM7Q',
-      'AssociateTag' => 'www.chrishillio-20',
+      'AssociateTag' => 'wwwchrishillio-20',
       'Operation'=> 'ItemSearch',
       'SearchIndex' => 'Books',
       # 'Power' => 'title:To%20Kill%20A%20Mockingbird%20and%20author:Harper%20Lee', 
@@ -60,7 +60,7 @@ class AmazonBookFetcher
 
   def parse_response(response)
     parsed = Nori.new.parse(response.body)
-    books = parsed["ItemSearchResponse"]["Items"]["Item"].first(3) rescue nil
+    books = parsed["ItemSearchResponse"]["Items"]["Item"].first(4) rescue nil
     return false unless books
     
     books.map do |book|

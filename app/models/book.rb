@@ -25,17 +25,13 @@ class Book < ActiveRecord::Base
   end
 
 
-  def self.top_10_books
-    top_ten = all.sort_by { |book| -book.selections.length }.first(10)
-  end
+  # def self.top_10_books
+  #   top_ten = all.sort_by { |book| -book.selections.length }.first(10)
+  # end
 
-  def self.book_cover_porn
-    top_ten = all.sort_by { |book| -book.selections.length }.first(100)
-  end
 
-  def show_selection_count
 
-  end
+
 
 
 
