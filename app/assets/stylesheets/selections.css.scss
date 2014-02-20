@@ -101,13 +101,20 @@
   font-weight: bold; 
 }
 
-.view button, .view button:hover, 
+
+.view .btn-success {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+/*.view button, .view button:hover, 
 .view button:visited, .view button:focus,
 .view button:active {
     background-color: white;
     border-color: black;
     color: black;
-}
+}*/
 
 .view h2 {
     text-transform: uppercase;

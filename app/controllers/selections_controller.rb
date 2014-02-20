@@ -21,7 +21,7 @@ class SelectionsController < ApplicationController
   def show
     @selection = Selection.find params[:id]
     @books = @selection.books
-    @top_books = Book.top_10_books
+    @top_books = Book.top_ten
   end 
 
 
@@ -29,7 +29,7 @@ class SelectionsController < ApplicationController
     @user = User.find_by(:name => params[:username])
     @selection = Selection.find_by(:user_id => @user.id)
     @books = @selection.books if @selection
-    @top_books = Book.top_10_books
+    @top_books = Book.top_ten
     render 'show'
   end 
 
